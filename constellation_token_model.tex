@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{ amssymb }
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Scala,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\title{The Constellation Token Model}
+\author{Constellation Labs}
+\date{June 9 2018}
+\setlength{\parskip}{1em}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We propose the Constellation Token Model, a distributed consensus protocol governed by model that achieves equilibria irrespective of speculative market fluctiations.
+\end{abstract}
+\setcounter{secnumdepth}{0}
+\section{Introduction}
+A Generative Economy is a living economy that is designed to generate the conditions for life to thrive, an economy with a built-in tendency to be socially fair and ecologically sustainable \footnote{Kelly, Marjorie, "Toward A Generative Economy" https://www.opendemocracy.net/ourkingdom/marjorie-kelly/toward-generative-economy}. This definition could be paraphrased as essentially a game where the rules of play enforce certain invariants, the result of which is emergent stabilization. Essentially, the act of playing the game itself is what enforces the invariant. Distributed consensus protocols, and the currencies they support, can be modeled as generative economies. Network stability is governed by eventually consistent equilibrium and equilibrium is defined in terms of invariant measures (we want to enforce that something doesn't change, or can be relied upon) that are maintained. Why do we need this? It allows for the the enforcement of real world performance specifics that are decoupled from external market dynamics (gas/exchange prices) which allows for technology focused adoption while also providing an external speculation market similar to traditional commodities markets.
+
+\section{Constellation Economics}
+Consensus protocols exist to provide a utility and that utility is the basis of a generative economic game. In Constellation, that utility is throughput. Like all consensus protocols, access to rewards is governed by delegate selection. In turn delegate selection is governed by a seeder/leacher ratio of transactions validated vs transactions submitted. We will use the term 'utility ratio' to describe the throughput a potential delegate has provided vs the throughput used. As nodes play they get ranked based on their utility ratio. Based on ranks they get access to rewards. Fees are charged relative to the scarcity of the utility that the protocol provides and are only charged if an account breaches its allotted utility ratio. The \$DAG token acts as an inflation mechanism like cash, which can be used to pay transaction fees when an account has not or can not maintain their required utility ratio. \$DAG is injected into the pool of validator rewards, and there is incentive to validate transactions that have an accompanying fee attached. Holders of the token assume the role of central bank, deploying \$DAG capital with the understanding that the free market dynamics of the protocol will ensure their account gets access to the network utility when capital is deployed. 
+
+Reputation is a unit that represents a 'stake' of total network utility (throughput). It is a perishable good in the constellation economy as accounts that leave the network will watch their reputation recede until 0 and they are replaced by a new player. Accounts' reputation is varying and falls according to various tiers which follow our definition of rank along with a branching factor.
+
+\section{Emergent Dynamics}
+The Constellation Economy is governed by the differential equilibria of the optimization (maximization) of some objective function. It's Lagrange multiplier is shadow price\footnote{\url{https://eml.berkeley.edu/~webfac/saez/e131_s04/shadow.pdf}} of the constraints.
+\begin{equation} \label{eq1}
+\begin{split}
+max_{x, y} f(x, y)
+\end{split}
+\end{equation}
+
+Say there is an invariant called the the constraint $c$, we want to impose this constraint on two variables $x$ and $y$, we can write this as $g(x, y) = c$. We can solve this problem by maximizing the Lagrangian of the system
+\begin{equation} \label{eq1}
+\begin{split}
+\mathcal{L}(x, y, \lambda) = f(x, y) + \lambda [c - g(x,y)]
+\end{split}
+\end{equation}
+
+where $\lambda$ is a Lagrange multiplier. The Lagrangian tells us Any maximum value must be a solution to first order necessary conditions (FOC) and in the case of the Lagrangian (as opposed to substitution), the solutions to the above maximization problem, $x^*, y^*, \lambda^*$ are all dependent on $c$ as $c$ is our invariant. As $c$ changes, the solutions will change. Define a function $F(c) = f(x^*(c), y^*(c))$ which gives us the maximum value of $f$ for a given $c$ and where $x^*(c), y^*(c)$ are optimal viable solutions for $f$, we can get for a given $c$ we find
+\begin{equation} \label{eq1}
+\begin{split}
+\frac{dF(c)}{dc} = \lambda^*(c) 
+\end{split}
+\end{equation}
+meaning that the gradient of the maximum value fluctuations with respect to our invariant $c$ is equivalent to the gradient of the Lagrange multiplier with respect to it. See (2) for a full proof.
+
+Constellation's gradient is defined in terms of the combinatorial space that that corresponds to network state. Constellation's data model was designed to follow combinatorial models in distributed computing, where network state can be described in terms of symplectic geometry and transitions are defined in terms of a discreet gradient.
+
+\begin{equation} \label{eq1}
+\begin{split}
+Define gradient here
+\end{split}
+\end{equation}
+
+Taking the fact that the planner's problem is equivalent to the decentralized market equilibria problem, we can define a protocol that implements the solution of the planner's problem into the decentralized dynamics of a cryptocurrency. With respect to constellation's gradient, the solution admitting a perfectly planned decentralized market economy is
+
+
+\subsection{Analysis and Results}
+
+
+\bibliographystyle{plain}
+\end{document}
