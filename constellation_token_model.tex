@@ -74,18 +74,39 @@ where $\lambda$ is a Lagrange multiplier. The Lagrangian tells us Any maximum va
 \frac{dF(c)}{dc} = \lambda^*(c) 
 \end{split}
 \end{equation}
-meaning that the gradient of the maximum value fluctuations with respect to our invariant $c$ is equivalent to the gradient of the Lagrange multiplier with respect to it. See (2) for a full proof.
+meaning that the gradient of the optimal maximum value fluctuates with respect to our invariant $c$ and is equivalent to the optimal Lagrange multiplier with respect to it. See (2) for a full proof.
 
-Constellation's gradient is defined in terms of the combinatorial space that that corresponds to network state. Constellation's data model was designed to follow combinatorial models in distributed computing, where network state can be described in terms of symplectic geometry and transitions are defined in terms of a discreet gradient.
+Constellation's gradient is defined in terms of the combinatorial space that that corresponds to network state. Constellation's data model was designed to follow combinatorial models in distributed computing, where network state can be described in terms of symplectic geometry and transitions are defined in terms of a discreet gradient. The utility of our network derives from the total volume of computational space available for verifying transactions. We can loosely model the total computational space as the volume of 'space' across nodes
 
-\begin{equation} \label{eq1}
+\begin{equation*} \label{eq1}
 \begin{split}
-Define gradient here
+\int_M d_1\wedge \dots \wedge d_r
 \end{split}
-\end{equation}
+\end{equation*}
 
-Taking the fact that the planner's problem is equivalent to the decentralized market equilibria problem, we can define a protocol that implements the solution of the planner's problem into the decentralized dynamics of a cryptocurrency. With respect to constellation's gradient, the solution admitting a perfectly planned decentralized market economy is
+where $M$ is a manifold and $r$ is the maximal rank. We this can be described as the numerical summation over our cohomological definition\footnote{https://arxiv.org/abs/1805.07047}
+\begin{equation*} \label{eq1}
+\begin{split}
+\sum_{r} \Omega^1 \oplus \dots \oplus \Omega^r
+\end{split}
+\end{equation*}
+where each $\Omega$ is an abelian group corresponding to the rank of the differential form above. We can further simplify, which we will, to define an approximate measure of throughput as the following geometric series 
+which can be further simplified to the geometric series
+\begin{equation*} \label{eq1}
+\begin{split}
+\Delta = \sum_{r} \beta(r) f(r) x^r dr
+\end{split}
+\end{equation*}
+where $\beta$ is a branching factor, the maximum number of nodes in a rank and $f(r)$ is a distribution of computational resources and $\Delta$ is the measure of throughput (computational volume).
 
+Taking the fact that the planner's problem is equivalent to the decentralized market equilibria problem, we can define a protocol that implements the solution of the planner's problem into the decentralized dynamics of a cryptocurrency. Given our canonical definition
+\begin{equation*} \label{eq1}
+\begin{split}
+\mathcal{L}(l, y, L, \phi, \omega) = U(l, x) + \phi[f(L) - x] + \omega[T - L - l]
+\end{split}
+\end{equation*}
+
+With respect to constellation's gradient, the solution admitting a perfectly planned decentralized market economy is defined in the FOC's of the above lagrangian. We will need to define a measure of throughput with respect to nodes $\frac{\partial \Delta}{dn}$ following from our definition of $\Delta$ above, and tie this into our lagrangian definition above by doing so in terms of $ l, y, L, \phi, \omega$ or rather relative labor, production, total potential labor, the price of production, and the value of time.
 
 \subsection{Analysis and Results}
 
