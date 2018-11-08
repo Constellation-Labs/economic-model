@@ -54,29 +54,7 @@ Consensus protocols exist to provide a utility and that utility is the basis of 
 Reputation is a unit that represents a 'stake' of total network utility (throughput). It is a perishable good in the constellation economy as accounts that leave the network will watch their reputation recede until 0 and they are replaced by a new player. Accounts' reputation is varying and falls according to various tiers which follow our definition of rank along with a branching factor.
 
 \section{Emergent Dynamics}
-The Constellation Economy is governed by the differential equilibria of the optimization (maximization) of some objective function. It's Lagrange multiplier is shadow price\footnote{\url{https://eml.berkeley.edu/~webfac/saez/e131_s04/shadow.pdf}} of the constraints.
-\begin{equation} \label{eq1}
-\begin{split}
-max_{x, y} f(x, y)
-\end{split}
-\end{equation}
-
-Say there is an invariant called the the constraint $c$, we want to impose this constraint on two variables $x$ and $y$, we can write this as $g(x, y) = c$. We can solve this problem by maximizing the Lagrangian of the system
-\begin{equation} \label{eq1}
-\begin{split}
-\mathcal{L}(x, y, \lambda) = f(x, y) + \lambda [c - g(x,y)]
-\end{split}
-\end{equation}
-
-where $\lambda$ is a Lagrange multiplier. The Lagrangian tells us Any maximum value must be a solution to first order necessary conditions (FOC) and in the case of the Lagrangian (as opposed to substitution), the solutions to the above maximization problem, $x^*, y^*, \lambda^*$ are all dependent on $c$ as $c$ is our invariant. As $c$ changes, the solutions will change. Define a function $F(c) = f(x^*(c), y^*(c))$ which gives us the maximum value of $f$ for a given $c$ and where $x^*(c), y^*(c)$ are optimal viable solutions for $f$, we can get for a given $c$ we find
-\begin{equation} \label{eq1}
-\begin{split}
-\frac{dF(c)}{dc} = \lambda^*(c) 
-\end{split}
-\end{equation}
-meaning that the gradient of the optimal maximum value fluctuates with respect to our invariant $c$ and is equivalent to the optimal Lagrange multiplier with respect to it. See (2) for a full proof.
-
-Constellation's gradient is defined in terms of the combinatorial space that that corresponds to network state. Constellation's data model was designed to follow combinatorial models in distributed computing, where network state can be described in terms of symplectic geometry and transitions are defined in terms of a discreet gradient. The utility of our network derives from the total volume of computational space available for verifying transactions. We can loosely model the total computational space as the volume of 'space' across nodes
+Constellation's value can be though of as stake within a total computational space. Constellation's data model was designed to follow combinatorial models in distributed computing, where network state can be described in terms of symplectic geometry and transitions are defined in terms of a discreet gradient. The value of our network derives from the total computational space available for verifying transactions i.e. its maximum throughput. We can loosely model the total computational space as the volume of 'space' across nodes with respect to rank $r$
 
 \begin{equation*} \label{eq1}
 \begin{split}
@@ -84,29 +62,36 @@ Constellation's gradient is defined in terms of the combinatorial space that tha
 \end{split}
 \end{equation*}
 
-where $M$ is a manifold and $r$ is the maximal rank. We this can be described as the numerical summation over our cohomological definition\footnote{https://arxiv.org/abs/1805.07047}
+where $M$ is a manifold and $r$ is the maximal rank. Within our model this would be explicitly defined as the numerical summation over the vector space of our cohomological definition\footnote{https://arxiv.org/abs/1805.07047}
 \begin{equation*} \label{eq1}
 \begin{split}
-\sum_{r} \Omega^1 \oplus \dots \oplus \Omega^r
-\end{split}
-\end{equation*}
-where each $\Omega$ is an abelian group corresponding to the rank of the differential form above. We can further simplify, which we will, to define an approximate measure of throughput as the following geometric series 
-which can be further simplified to the geometric series
-\begin{equation*} \label{eq1}
-\begin{split}
-\Delta = \sum_{r} \beta(r) f(r) x^r dr
-\end{split}
-\end{equation*}
-where $\beta$ is a branching factor, the maximum number of nodes in a rank and $f(r)$ is a distribution of computational resources and $\Delta$ is the measure of throughput (computational volume).
-
-Taking the fact that the planner's problem is equivalent to the decentralized market equilibria problem, we can define a protocol that implements the solution of the planner's problem into the decentralized dynamics of a cryptocurrency. Given our canonical definition
-\begin{equation*} \label{eq1}
-\begin{split}
-\mathcal{L}(l, y, L, \phi, \omega) = U(l, x) + \phi[f(L) - x] + \omega[T - L - l]
+\sum_{1 \dots r} \Omega^1 \oplus \dots \oplus \Omega^r
 \end{split}
 \end{equation*}
 
-With respect to constellation's gradient, the solution admitting a perfectly planned decentralized market economy is defined in the FOC's of the above lagrangian. We will need to define a measure of throughput with respect to nodes $\frac{\partial \Delta}{dn}$ following from our definition of $\Delta$ above, and tie this into our lagrangian definition above by doing so in terms of $ l, y, L, \phi, \omega$ or rather relative labor, production, total potential labor, the price of production, and the value of time.
+where each $\Omega$ is a graded abelian group corresponding to a rank in the differential form above. For our study, we can make a very simple approximation. We define the total computational space as the sum of all available resources $f(n)$ each node $n$ provides
+\begin{equation*} \label{eq1}
+\begin{split}
+\Delta(n) = \sum_{i=0}^r e^{\beta f(n)} dn
+\end{split}
+\end{equation*}
+
+where $dn$ is a differential over the sorted set of all n by instance size, such that $f(n-1) \leq f(n)$, $\beta$ is a branching factor, the maximum number of nodes in a rank and $f(n)$ is a distribution of computational resources. The relationship between \$DAG and our network's value is that $\Delta(n) = VR_{\$DAG}$ where VR represents the rate of validator rewards distribution, a decaying function that will eventually disburse 40\% of all total \$DAG, call the \$DAG reserve owned by investors call it supply $S$. The $VR$ is effectively 'locked' into the total space of $\Delta(n)$ and there is a conversion rate $C$ that converts \$DAG into some subset of compute space (stake) of $\Delta$ such that total \$DAG is conserved. Thus, since $VR - C*S = 0$ 
+
+\begin{equation*} \label{eq1}
+\begin{split}
+\Delta(n) = C* IR
+\end{split}
+\end{equation*}
+
+which we can use to relate the influx of value with respect to nodes joining/leaving
+\begin{equation*} \label{eq1}
+\begin{split}
+\frac{\partial \Delta}{\partial n} = C* \frac{\partial S}{\partial n}
+\end{split}
+\end{equation*}
+
+where c is our equilibria condition, a 'maximum conversion rate' for spending \$DAG for a subset of $\Delta$. When capitol is injected from $S$ the validator rewards increase by a factor of $C*s$ where $s$ is the subset of total supply injected to $\Delta$.
 
 \subsection{Analysis and Results}
 
