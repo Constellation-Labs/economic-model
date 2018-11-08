@@ -87,12 +87,19 @@ where $dn$ is a differential over the sorted set of all n by instance size, such
 which we can use to relate the influx of value with respect to nodes joining/leaving
 \begin{equation*} \label{eq1}
 \begin{split}
-\frac{\partial \Delta}{\partial n} = C* \frac{\partial S}{\partial n}
+\frac{\partial \Delta}{\partial n} = C(t)* \frac{\partial S}{\partial n}
 \end{split}
 \end{equation*}
 
-where c is our equilibria condition, a 'maximum conversion rate' for spending \$DAG for a subset of $\Delta$. When capitol is injected from $S$ the validator rewards increase by a factor of $C*s$ where $s$ is the subset of total supply injected to $\Delta$.
+where c is our equilibria condition, a 'maximum conversion rate' for spending \$DAG for a subset of $\Delta$. When capitol is injected from $S$ the validator rewards increase by a factor of $C*s$ where $s$ is the subset of total supply injected to $\Delta$. We can account for the increase in validator rewards with respect to our conversion rate, $C(t)$ which is equal to our 'minting' curve
 
+\begin{equation*} \label{eq1}
+\begin{split}
+C(t) = e^{-mt}
+\end{split}
+\end{equation*}
+
+where $m$ is the minting rate.
 \subsection{Analysis and Results}
 
 
