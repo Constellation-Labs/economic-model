@@ -53,7 +53,7 @@ Consensus protocols exist to provide a utility and that utility is the basis of 
 
 Reputation is a unit that represents a 'stake' of total network utility (throughput). It is a perishable good in the constellation economy as accounts that leave the network will watch their reputation recede until 0 and they are replaced by a new player. Accounts' reputation is varying and falls according to various tiers which follow our definition of rank along with a branching factor.
 
-\section{Emergent Dynamics}
+\section{Equilibrium and Market Dynamics}
 Constellation's value can be though of as stake within a total computational space. Constellation's data model was designed to follow combinatorial models in distributed computing, where network state can be described in terms of symplectic geometry and transitions are defined in terms of a discreet gradient. The value of our network derives from the total computational space available for verifying transactions i.e. its maximum throughput. We can loosely model the total computational space as the volume of 'space' across nodes with respect to rank $r$
 
 \begin{equation*} \label{eq1}
@@ -62,14 +62,14 @@ Constellation's value can be though of as stake within a total computational spa
 \end{split}
 \end{equation*}
 
-where $M$ is a manifold and $r$ is the maximal rank. Within our model this would be explicitly defined as the numerical summation over the vector space of our cohomological definition\footnote{https://arxiv.org/abs/1805.07047}
+where $M$ is a manifold and $r$ is the maximal rank. Within our model this would be explicitly defined as the numerical integration over the vector space of our cohomological definition\footnote{https://arxiv.org/abs/1805.07047}
 \begin{equation*} \label{eq1}
 \begin{split}
 \sum_{1 \dots r} \Omega^1 \oplus \dots \oplus \Omega^r
 \end{split}
 \end{equation*}
 
-where each $\Omega$ is a graded abelian group corresponding to a rank in the differential form above. For our study, we can make a very simple approximation. We define the total computational space as the sum of all available resources $f(n)$ each node $n$ provides
+where each $\Omega$ is a graded abelian group corresponding to a rank in the differential form above. In general, this space is defined in terms of homological integration \footnote{https://ncatlab.org/nlab/show/cohomological+integration} (over currents) and can be calculated discretely in terms of a product integral, which we will define fully in later work. For our study, we can make a very simple approximation. We define the total computational space as the sum of all available resources $f(n)$ each node $n$ provides
 \begin{equation*} \label{eq1}
 \begin{split}
 \Delta(n) = \sum_{i=0}^r e^{\beta f(n)} dn
@@ -80,7 +80,7 @@ where $dn$ is a differential over the sorted set of all n by instance size, such
 
 \begin{equation*} \label{eq1}
 \begin{split}
-\Delta(n) = C* IR
+\Delta(n) = C* S
 \end{split}
 \end{equation*}
 

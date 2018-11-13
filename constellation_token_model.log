@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  8 NOV 2018 14:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  13 NOV 2018 09:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -340,6 +340,9 @@ LaTeX Warning: Label `eq1' multiply defined.
 
 LaTeX Warning: Label `eq1' multiply defined.
 
+
+LaTeX Warning: Label `eq1' multiply defined.
+
 )
 \openout1 = `constellation_token_model.aux'.
 
@@ -438,7 +441,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 107.
 Package rerunfilecheck Info: File `constellation_token_model.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: F79F5EA58FE78D5A3B9F891A62679F5A;226.
+(rerunfilecheck)             Checksum: 2877B187F75073F95587AF5AB1EE6D0D;240.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -446,8 +449,8 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 107.
  ) 
 Here is how much of TeX's memory you used:
- 8202 strings out of 492649
- 119354 string characters out of 6129622
+ 8203 strings out of 492649
+ 119365 string characters out of 6129622
  240927 words of memory out of 5000000
  11981 multiletter control sequences out of 15000+600000
  11802 words of font info for 46 fonts, out of 8000000 for 9000
@@ -467,10 +470,10 @@ ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/201
 8/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on constellation_token_model.pdf (3 pages, 156246 bytes).
+Output written on constellation_token_model.pdf (3 pages, 157565 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
+ 102 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
