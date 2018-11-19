@@ -33,6 +33,8 @@
   tabsize=3
 }
 
+\graphicspath{ {./images/} }
+
 \title{The Constellation Token Model}
 \author{Constellation Labs}
 \date{June 9 2018}
@@ -54,44 +56,83 @@ Consensus protocols exist to provide a utility and that utility is the basis of 
 Reputation is a unit that represents a 'stake' of total network utility (throughput). It is a perishable good in the constellation economy as accounts that leave the network will watch their reputation recede until 0 and they are replaced by a new player. Accounts' reputation is varying and falls according to various tiers which follow our definition of rank along with a branching factor.
 
 \section{Equilibrium and Market Dynamics}
-Constellation's value can be though of as stake within a total computational space. Constellation's data model was designed to follow combinatorial models in distributed computing, where network state can be described in terms of symplectic geometry and transitions are defined in terms of a discreet gradient. The value of our network derives from the total computational space available for verifying transactions i.e. its maximum throughput. We can loosely model the total computational space as the volume of 'space' across nodes with respect to rank $r$
+Constellation's value can be though of as stake within a total computational space. Constellation's data model was designed to follow combinatorial models in distributed computing, where network state can be described in terms of simplicial geometry and transitions are defined in terms of a discreet gradient. The value of our network derives from the total computational space available for verifying transactions i.e. its maximum throughput. We can loosely model the total computational space as the volume of 'space' across nodes with respect to rank $r$
 
 \begin{equation*} \label{eq1}
 \begin{split}
-\int_M d_1\wedge \dots \wedge d_r
+\int_M \epsilon_1 \wedge \dots \wedge \epsilon_r
 \end{split}
 \end{equation*}
 
-where $M$ is a manifold and $r$ is the maximal rank. Within our model this would be explicitly defined as the numerical integration over the vector space of our cohomological definition\footnote{https://arxiv.org/abs/1805.07047}
+where $M$ is a manifold, $\epsilon$ is the sheaf of the vector space of rank $r$. Within our model this would be explicitly defined as the numerical integration over the outer product of our cohomological definition\footnote{https://arxiv.org/abs/1805.07047} which is a vector space given by the tensor product of each space across ranks
 \begin{equation*} \label{eq1}
 \begin{split}
-\sum_{1 \dots r} \Omega^1 \oplus \dots \oplus \Omega^r
+\sum_{1 \dots r} \Gamma^{\epsilon_1} \otimes \dots \otimes \Gamma^{\epsilon_r}
 \end{split}
 \end{equation*}
 
-where each $\Omega$ is a graded abelian group corresponding to a rank in the differential form above. For our study, we can make a very simple approximation. We define the total computational space as the sum of all available resources $f(n)$ each node $n$ provides
+
+where each $\Gamma^{\epsilon}$ is a manifold corresponding to a rank in the differential form above, subordinate to the rank before it. If we define bandwidth (fiber/sec) as the total space\footnote{sec 9.2 \url{ftp.cis.upenn.edu/pub/cis610/public_html/diffgeom4.pdf}} of the resources given by each node
+\begin{equation*} \label{eq1}
+\begin{split}
+B_{(\frac{fiber}{sec})} = \sum_{r} \int \rho_i \theta_i \omega
+\end{split}
+\end{equation*}
+
+where $\rho_i$ is a partition of unity and $\theta_i$ is a discrete diffeomorphism (protocol) on our r-form $\omega$ and fibers are Signed Observation Edges\footnote{link to arch blog post} of our data model. The actual value of our network can be described as the cost to host the resources each node provides. 
+\begin{equation*} \label{eq1}
+\begin{split}
+R_{(\frac{\$}{sec})} = \sum_{r} \int \rho_i T_i \omega
+\end{split}
+\end{equation*}
+
+This is a slight modification to our definition of bandwidth above by replacing $\theta$ with $T$ a mapping to instance types and cost.
+
+The total space of all resources per node is given by the direct sum of R and B, however in order to give a some measure of performance, we can do this by mapping each entry in the bandwidth space to it's normalized Shannon entropy (bits), giving us a measure of relative information gain to cost.
+\begin{equation*} \label{eq1}
+\begin{split}
+S_{(\frac{bits}{\$})} = B_{entropy} \oplus R = (\sum_{r} \int \rho_i H_i \omega ) \oplus R
+\end{split}
+\end{equation*}
+
+where $H$ is our normalized Shannon entropy
+\begin{equation*} \label{eq1}
+\begin{split}
+H_n(p) = - \sum_i \frac{p_i log_b p_i}{log_b n}
+\end{split}
+\end{equation*}
+and $p$ is a probability measure of how the result of a node's actions deviate from the acceptable state of the protocol and $b$ is our base, bits in the case of Shannon entropy. Deficiency in entropy can be seen as a measure of efficiency. We want to use normalized entropy as using normal Shannon entropy scales with sample size.
+
+Finally we can define a rewards function $VR$ for an account $a$ representing one or more nodes in the network as the tensor $S(a) \rightarrow \$DAG_{(\frac{bits}{\$})}$ which is just the sum over entries of $S$ (the nodes) which correspond to an account $a$
+\begin{equation*} \label{eq1}
+\begin{split}
+S(a) = \sum_{i, r} h | \ h_{i, r} \in a,  \forall h \in S
+\end{split}
+\end{equation*}
+
+For our study, we can make a very simple approximation. We define the total computational space as the sum of all available resources $f(n)$ each node $n$ provides
 \begin{equation*} \label{eq1}
 \begin{split}
 \Delta(n) = \sum_{i=0}^r e^{\beta f(n)} dn
 \end{split}
 \end{equation*}
 
-where $dn$ is a differential over the sorted set of all n by instance size, such that $f(n-1) \leq f(n)$, $\beta$ is a branching factor, the maximum number of nodes in a rank and $f(n)$ is a distribution of computational resources. The relationship between \$DAG and our network's value is that $\Delta(n) = VR_{\$DAG}$ where VR represents the rate of validator rewards distribution, a decaying function that will eventually disburse 40\% of all total \$DAG, call the \$DAG reserve owned by investors call it supply $S$. The $VR$ is effectively 'locked' into the total space of $\Delta(n)$ and there is a conversion rate $C$ that converts \$DAG into some subset of compute space (stake) of $\Delta$ such that total \$DAG is conserved. Thus, since $VR - C*S = 0$ 
+where $dn$ is a differential over the sorted (po-)set of all n by instance size, such that $f(n-1) \leq f(n)$, $\beta$ is a "branching factor" or approximation of our partitions of union $p_i$ and $f(n)$ is a distribution of computational resources. The relationship between \$DAG and our network's value is that $\Delta(n) = VR_{\$DAG}$ where VR represents the rate of validator rewards distribution, a decaying function that will eventually disburse 40\% of all total \$DAG, call the \$DAG reserve owned by investors call it supply $I$. The $VR$ is effectively 'locked' into the total space of $\Delta(n)$ and there is a conversion rate $C$ that converts \$DAG into some subset of compute space (stake) of $\Delta$ such that total \$DAG is conserved. Thus, since $VR - C*I = 0$ 
 
 \begin{equation*} \label{eq1}
 \begin{split}
-\Delta(n) = C* S
+\Delta(n) = C* I
 \end{split}
 \end{equation*}
 
 which we can use to relate the influx of value with respect to nodes joining/leaving
 \begin{equation*} \label{eq1}
 \begin{split}
-\frac{\partial \Delta}{\partial n} = C(t)* \frac{\partial S}{\partial n}
+\frac{\partial \Delta}{\partial n} = C(t)* \frac{\partial I}{\partial n}
 \end{split}
 \end{equation*}
 
-where c is our equilibria condition, a 'maximum conversion rate' for spending \$DAG for a subset of $\Delta$. When capitol is injected from $S$ the validator rewards increase by a factor of $C*s$ where $s$ is the subset of total supply injected to $\Delta$. We can account for the increase in validator rewards with respect to our conversion rate, $C(t)$ which is equal to our 'minting' curve
+where C is our equilibria condition, a 'maximum conversion rate' for spending \$DAG for a subset of $\Delta$. When capitol is injected from $I$ the validator rewards increase by a factor of $C*di$ where $di$ is the subset of total supply injected to $\Delta$. We can account for the increase in validator rewards with respect to our conversion rate, $C(t)$ which is equal to our 'minting' curve
 
 \begin{equation*} \label{eq1}
 \begin{split}
@@ -99,9 +140,31 @@ C(t) = e^{-mt}
 \end{split}
 \end{equation*}
 
-where $m$ is the minting rate.
+where $m$ is the minting rate and we use time (t) as a continuous approximation of fiber (SOE) creation which in reality is discretized.
 \subsection{Analysis and Results}
+\begin{figure}[h]
+\caption{We need a basic plot of validator rewards with respect to bot h time and fiber creation, fiber creation will be discretized and time should roughly follow fiber creation}
+\includegraphics[width=8cm]{yo_dawg}
+\centering
+\end{figure}
 
+\begin{figure}[h]
+\caption{We need a plot that connects entropy and seeder leacher ratios. We can do this by having one main curve with error bars being a gaussian of deviations from acceptable states. We will want to pair this with a discrete plot of seeder leacher ratios to VR then superimpose a curve over the discrete intervals. Error bars around that smooth curve represent a rate of fibers accepted to fibers created }
+\includegraphics[width=8cm]{yo_dawg}
+\centering
+\end{figure}
+
+\begin{figure}[h]
+\caption{We need a plot that shows the increase in value network according to instance types and nodes. Set this next to a plot of throughput give ninstance types and nodes}
+\includegraphics[width=8cm]{yo_dawg}
+\centering
+\end{figure}
+
+\begin{figure}[h]
+\caption{We need a plot that connects seeder leacher ratios to information gain/loss. This will prob be hardest}
+\includegraphics[width=8cm]{yo_dawg}
+\centering
+\end{figure}
 
 \bibliographystyle{plain}
 \end{document}
