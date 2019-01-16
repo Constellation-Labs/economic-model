@@ -1,0 +1,7 @@
+name	cpu	memory	cost	preempt_cost
+n1-highcpu-2	2	1.80GB	$0.0709	$0.0150
+n1-highcpu-4	4	3.60GB	$0.1418	$0.0300
+n1-highcpu-8	8	7.20GB	$0.2836	$0.0600
+n1-highcpu-16	16	14.40GB	$0.5672	$0.1200
+n1-highcpu-32	32	28.80GB	$1.1344	$0.2400
+n1-highcpu-64	64	57.6GB	$2.2688	$0.4800

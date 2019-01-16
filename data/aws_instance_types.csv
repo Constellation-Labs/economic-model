@@ -1,0 +1,16 @@
+Name , Memory , EC2 Compute units , Storage , I/O performance , EBS-Optimized Available , API name
+M1 Small , 1.7 GiB , 1 , 160 GB instance , Moderate , No , m1.small
+M1 Medium , 3.75 GiB , 2 , 410 GB instance , Moderate , No , m1.medium
+M1 Large , 7.5 GiB , 4 , 850 GB instance , High , 500 Mbps , m1.large
+M1 Extra Large , 15 GiB , 8 , 1690 GB instance , High , 1000 Mbps , m1.xlarge
+M3 Extra Large , 15 GiB , 13 , EBS , Moderate , No , m3.xlarge
+M3 Double Extra Large , 30 GiB , 26 , EBS , High , No , m3.2xlarge
+Micro , 613 MiB , 2 , EBS , Low , No , t1.micro
+High-Memory Extra Large , 17.1 GiB , 5 , 420 GB of instance , Moderate , No , m2.xlarge
+High-Memory Double Extra Large , 34.2 GiB , 13 , 850 GB of instance , High , No , m2.2xlarge
+High-Memory Quadruple Extra Large , 68.4 GiB , 26 , 1690 GB of instance , High , 1000 Mbps , m2.4xlarge
+High-CPU Medium , 1.7 GiB , 5 , 350 GB of instance , Moderate , No , c1.medium
+High-CPU Extra Large , 7 GiB , 20 , 1690 GB of instance , High , No , c1.xlarge
+Cluster Compute Eight Extra Large , 60.5 GiB , 88 , 3370 GB of instance , Very High (10 Gigabit Ethernet) , No* , cc2.8xlarge
+Cluster GPU Quadruple Extra Large , 22 GiB , 5 , 1690 GB of instance , Very High (10 Gigabit Ethernet) , No* , cg1.4xlarge
+High I/O Quadruple Extra Large , 60.5 GiB , 35 , 2 SSD-based volumes each with 1024 GB of instance , Very High (10 Gigabit Ethernet) , No*** , hi1.4xlarge

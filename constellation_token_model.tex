@@ -64,12 +64,24 @@ Constellation's value can be though of as stake within a total computational spa
 \end{split}
 \end{equation*}
 
+\begin{figure}[h]
+\caption{We need two figures, One of the tiered cluster hierarchy and another top down look at the graph showing 'constellations' notes separated by tiers of rep score. Looks like gravity}
+\includegraphics[width=8cm]{yo_dawg}
+\centering
+\end{figure}
+
 where $M$ is a manifold, $\epsilon$ is the sheaf of the vector space of rank $r$. Within our model this would be explicitly defined as the numerical integration over the outer product of our cohomological definition\footnote{https://arxiv.org/abs/1805.07047} which is a vector space given by the tensor product of each space across ranks
 \begin{equation*} \label{eq1}
 \begin{split}
 \sum_{1 \dots r} \Gamma^{\epsilon_1} \otimes \dots \otimes \Gamma^{\epsilon_r}
 \end{split}
 \end{equation*}
+
+\begin{figure}[h]
+\caption{Formulate a ringed space as a hashmap and how each key is like a basis. If there are collisions there is like a singularity that appears. Sheaves are like subsets of the hashmap and represents the newest state of the partition of unity (sheaves are charts)}
+\includegraphics[width=8cm]{yo_dawg}
+\centering
+\end{figure}
 
 
 where each $\Gamma^{\epsilon}$ is a manifold corresponding to a rank in the differential form above, subordinate to the rank before it. If we define bandwidth (fiber/sec) as the total space\footnote{sec 9.2 \url{ftp.cis.upenn.edu/pub/cis610/public_html/diffgeom4.pdf}} of the resources given by each node
@@ -79,21 +91,27 @@ B_{(\frac{fiber}{sec})} = \sum_{r} \int \rho_i \theta_i \omega
 \end{split}
 \end{equation*}
 
-where $\rho_i$ is a partition of unity and $\theta_i$ is a discrete diffeomorphism (protocol) on our r-form $\omega$ and fibers are Signed Observation Edges\footnote{link to arch blog post} of our data model. The actual value of our network can be described as the cost to host the resources each node provides. 
+where $\rho_i$ is a partition of unity and $\theta_i$ is a discrete diffeomorphism (protocol) on our r-form $\omega$ and fibers are Signed Observation Edges\footnote{link to arch blog post} of our data model. (make sure to elaborate that the total space is made up of all actions and the diffeomorphism itself is what determines the solution plane once we solidify into a snapshot. It is essentially a cut on the graph where we keep a subset of bundles not cut as tips new bundles are latched on. The diffeomorphism
+
+The actual value of our network can be described as the cost to host the resources each node provides. 
 \begin{equation*} \label{eq1}
 \begin{split}
 R_{(\frac{\$}{sec})} = \sum_{r} \int \rho_i T_i \omega
 \end{split}
 \end{equation*}
 
-This is a slight modification to our definition of bandwidth above by replacing $\theta$ with $T$ a mapping to instance types and cost.
-
-The total space of all resources per node is given by the direct sum of R and B, however in order to give a some measure of performance, we can do this by mapping each entry in the bandwidth space to it's normalized Shannon entropy (bits), giving us a measure of relative information gain to cost.
+This is a slight modification to our definition of bandwidth above by replacing $\theta$ with $T$ a mapping to instance types and cost. The total space of all value per node is given by the product of R and B, however in order to give a some measure of performance, we can do this by mapping each entry in the bandwidth space to it's normalized Shannon entropy (bits), giving us a measure of relative information gain to cost.
 \begin{equation*} \label{eq1}
 \begin{split}
-S_{(\frac{bits}{\$})} = B_{entropy} \oplus R = (\sum_{r} \int \rho_i H_i \omega ) \oplus R
+S_{(\frac{bits*\$}{sec})} = B_{entropy} \oplus R = (\sum_{r} \int \rho_i H_i \omega ) \oplus R
 \end{split}
 \end{equation*}
+
+\begin{figure}[h]
+\caption{Show how the dag gets quilted an how agreed data adds negentropy while disagreed data causes entropy. Use this to quantify a node's shannon entropy (coloring subgraph of each node within the total space of all observations? highlight paths)}
+\includegraphics[width=8cm]{yo_dawg}
+\centering
+\end{figure}
 
 where $H$ is our normalized Shannon entropy
 \begin{equation*} \label{eq1}
@@ -103,7 +121,7 @@ H_n(p) = - \sum_i \frac{p_i log_b p_i}{log_b n}
 \end{equation*}
 and $p$ is a probability measure of how the result of a node's actions deviate from the acceptable state of the protocol and $b$ is our base, bits in the case of Shannon entropy. Deficiency in entropy can be seen as a measure of efficiency. We want to use normalized entropy as using normal Shannon entropy scales with sample size.
 
-Finally we can define a rewards function $VR$ for an account $a$ representing one or more nodes in the network as the tensor $S(a) \rightarrow \$DAG_{(\frac{bits}{\$})}$ which is just the sum over entries of $S$ (the nodes) which correspond to an account $a$
+Finally we can define a rewards function $VR$ for an account $a$ representing one or more nodes in the network as the tensor $S(a) \rightarrow \$DAG_{(\frac{bits*\$}{sec})}$ which is just the sum over entries of $S$ (the nodes) which correspond to an account $a$
 \begin{equation*} \label{eq1}
 \begin{split}
 S(a) = \sum_{i, r} h | \ h_{i, r} \in a,  \forall h \in S
@@ -143,7 +161,44 @@ C(t) = e^{-mt}
 where $m$ is the minting rate and we use time (t) as a continuous approximation of fiber (SOE) creation which in reality is discretized.
 \subsection{Analysis and Results}
 \begin{figure}[h]
-\caption{We need a basic plot of validator rewards with respect to bot h time and fiber creation, fiber creation will be discretized and time should roughly follow fiber creation}
+\caption{bitcoin validator rewards chart}
+\includegraphics[width=8cm]{yo_dawg}
+\centering
+\end{figure}
+
+\begin{figure}[h]
+\caption{top left next to above bitcoin rewards according to hash power.}
+\includegraphics[width=8cm]{yo_dawg}
+\centering
+\end{figure}
+
+\begin{figure}[h]
+\caption{We need a basic plot of validator rewards with respect to bot h time and fiber creation, fiber creation will be discretized and time should roughly follow fiber creation. Top left corner of square.}
+\includegraphics[width=8cm]{yo_dawg}
+\centering
+\end{figure}
+
+\begin{figure}[h]
+\caption{Constellation validator rewards chart. The number of nodes the network starts with num nodes in the end. Plot adoption ad exponential. As more nodes join an existing node gets 'shifted' up and they are allowed to process more txs (get more rewards)}
+\includegraphics[width=8cm]{yo_dawg}
+\centering
+\end{figure}
+
+\begin{figure}[h]
+\caption{Also show that per node reward is higher after having been on the system for a while. Having been on the system for a while has the ability to earn more as nodes grow 'under' them  }
+\includegraphics[width=8cm]{yo_dawg}
+\centering
+\end{figure}
+
+
+\begin{figure}[h]
+\caption{Put units of dollars in terms of cost per Ethereum tx (assumption they could perform this thoughput). Show that value increases as more nodes join and peg to ethereum values (error bars around network cost vs tx rates since gas fluctuates). }
+\includegraphics[width=8cm]{yo_dawg}
+\centering
+\end{figure}
+
+\begin{figure}[h]
+\caption{As node count increase, exponentially more value (compared to gas prices. Constellation transaction value/throughput chart. Show gas prices exponentially increasing as nodes grow linearly and ours doing the same but shifting to the right as nodes join (do different node counts on x axis and color shifts right) Next to this we want to also plot how transaction time vs cost increases ratio decreases as throughput increases on both eth and btc (wait times vs gas prices) and compare to us which stays flatlinekeychain}
 \includegraphics[width=8cm]{yo_dawg}
 \centering
 \end{figure}
@@ -155,7 +210,7 @@ where $m$ is the minting rate and we use time (t) as a continuous approximation 
 \end{figure}
 
 \begin{figure}[h]
-\caption{We need a plot that shows the increase in value network according to instance types and nodes. Set this next to a plot of throughput give ninstance types and nodes}
+\caption{We need a plot that shows the increase in value network according to instance types and nodes. Set this next to a plot of throughput give instance types and nodes}
 \includegraphics[width=8cm]{yo_dawg}
 \centering
 \end{figure}
