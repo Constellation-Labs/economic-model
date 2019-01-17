@@ -35,28 +35,34 @@
 
 \graphicspath{ {./images/} }
 
-\title{The Constellation Token Model}
+\title{Generative Tokenomics: The Constellation Validator Rewards Model}
 \author{Constellation Labs}
-\date{June 9 2018}
+\date{January 15 2019}
 \setlength{\parskip}{1em}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-We propose the Constellation Token Model, a distributed consensus protocol governed by model that achieves equilibria irrespective of speculative market fluctiations.
+We propose the Generative Tokenomics, a validator rewards model that adapts according to dynamic network organization.
 \end{abstract}
 \setcounter{secnumdepth}{0}
 \section{Introduction}
-A Generative Economy is a living economy that is designed to generate the conditions for life to thrive, an economy with a built-in tendency to be socially fair and ecologically sustainable \footnote{Kelly, Marjorie, "Toward A Generative Economy" https://www.opendemocracy.net/ourkingdom/marjorie-kelly/toward-generative-economy}. This definition could be paraphrased as essentially a game where the rules of play enforce certain invariants, the result of which is emergent stabilization. Essentially, the act of playing the game itself is what enforces the invariant. Distributed consensus protocols, and the currencies they support, can be modeled as generative economies. Network stability is governed by eventually consistent equilibrium and equilibrium is defined in terms of invariant measures (we want to enforce that something doesn't change, or can be relied upon) that are maintained. Why do we need this? It allows for the the enforcement of real world performance specifics that are decoupled from external market dynamics (gas/exchange prices) which allows for technology focused adoption while also providing an external speculation market similar to traditional commodities markets.
+A cryptocurrency is a commodification of the utility provided by a distributed consensus protocol, similar to how currencies were once backed by gold or silver. For most cryptocurrencies, that utility is an atomic append only transaction to an immutable append only log, yielding a tamper proof record of network state. Network state is defined by the dimensions of the data model and units involved in the transactions of the protocol. 
 
-\section{Constellation Economics}
-Consensus protocols exist to provide a utility and that utility is the basis of a generative economic game. In Constellation, that utility is throughput. Like all consensus protocols, access to rewards is governed by delegate selection. In turn delegate selection is governed by a seeder/leacher ratio of transactions validated vs transactions submitted. We will use the term 'utility ratio' to describe the throughput a potential delegate has provided vs the throughput used. As nodes play they get ranked based on their utility ratio. Based on ranks they get access to rewards. Fees are charged relative to the scarcity of the utility that the protocol provides and are only charged if an account breaches its allotted utility ratio. The \$DAG token acts as an inflation mechanism like cash, which can be used to pay transaction fees when an account has not or can not maintain their required utility ratio. \$DAG is injected into the pool of validator rewards, and there is incentive to validate transactions that have an accompanying fee attached. Holders of the token assume the role of central bank, deploying \$DAG capital with the understanding that the free market dynamics of the protocol will ensure their account gets access to the network utility when capital is deployed. 
+Consensus protocols with a linear data model have fallen short in terms of scalability. In most cases they are distributed systems that operate in serial, which is antithetical to the concurrent underpinnings of distributed systems; horizontal scalability and efficient data locality. Attempts at sharding these protocols are limited by their ability to adapt to network outages and centralized delegate selection models that hinder the efficacy of data validation.
 
-Reputation is a unit that represents a 'stake' of total network utility (throughput). It is a perishable good in the constellation economy as accounts that leave the network will watch their reputation recede until 0 and they are replaced by a new player. Accounts' reputation is varying and falls according to various tiers which follow our definition of rank along with a branching factor.
+In order for the utility of a distributed consensus protocol to apply to scalable backends, they must be fully compatible with dynamic scaling/deployment features such as elastic deployment and dynamic partitioning. As the backbone to these systems is the economic incentive to provide computational resources, a key requirement is the ability for their validator rewards models to dynamically adjust in tandem with network organization. 
 
-\section{Equilibrium and Market Dynamics}
-Constellation's value can be though of as stake within a total computational space. Constellation's data model was designed to follow combinatorial models in distributed computing, where network state can be described in terms of simplicial geometry and transitions are defined in terms of a discreet gradient. The value of our network derives from the total computational space available for verifying transactions i.e. its maximum throughput. We can loosely model the total computational space as the volume of 'space' across nodes with respect to rank $r$
+Generative Economics is a comparably dynamic economic model. A Generative Economy is a living economy that is designed to generate the conditions for life to thrive, an economy with a built-in tendency to be socially fair and ecologically sustainable \footnote{Kelly, Marjorie, "Toward A Generative Economy" https://www.opendemocracy.net/ourkingdom/marjorie-kelly/toward-generative-economy}. The Constellation Protocol embodies this ethos in its validator rewards model. Validator rewards fluctuate as nodes join or leave and increase or decrease their contribution.
+
+\section{A Generative Tokenomic Model}
+In Constellation, utility is given not only by immutable notarization or the application of consensus to validate data but also by throughput, or the rate at which data is notarized and validated. Like all consensus protocols, access to rewards is governed by delegate selection. In turn delegate selection is governed by a decentralized locality sensitive hashing mechanism which organizes the network by a seeder/leacher ratio of transactions validated vs transactions submitted. Reputation is equivalent to the throughput a delegate has provided vs the throughput used (as well as the efficacy of notarization and validation; more about this model is detailed in the technical white paper). As nodes participate they are ranked based on their reputation. The magnitude of rewards and reputation is proportional to rank. Fees are charged relative to the scarcity of the throughput and are only charged if an account breaches its allotted utility ratio. The \$DAG token acts as an inflation mechanism like cash, which, like gas\footnote{link to Eth model} can be used to pay transaction fees when an account has not or can not maintain their required utility ratio. \$DAG is injected into the pool of validator rewards, and there is incentive to validate transactions that have an accompanying fee attached. 
+
+The dimensionality of reputation is equivalent to a volume of computational space relative to the computational space of total network. It is a perishable good in the constellation economy as accounts that leave the network will watch their reputation recede until 0 and they are replaced by a new player. Accounts' reputation is varying and falls according to various tiers which follow our definition of rank along with a branching factor. It is the role of \$DAG to provide a non depreciating asset for work provided. \$DAG will initially be earn-able through participation within a minting window, depreciating according to a minting curve. During the minting window and after  \$DAG will be earned by nodes processing transactions that have been submitted with accompanying transaction fees (as opposed to transactions submitted within a node's allotted seeder/leacher ratio.)
+
+\section{Validator rewards}
+Constellation's data model was designed to follow combinatorial models in distributed computing, where network state can be described in terms of simplicial geometry and transitions are defined in terms of a discreet gradient. The value of our network derives from the total computational space (volume of network resources) available for verifying transactions i.e. its maximum throughput. We can loosely model the total computational space as the volume of 'space' across nodes with respect to rank $r$
 
 \begin{equation*} \label{eq1}
 \begin{split}
@@ -65,7 +71,7 @@ Constellation's value can be though of as stake within a total computational spa
 \end{equation*}
 
 \begin{figure}[h]
-\caption{We need two figures, One of the tiered cluster hierarchy and another top down look at the graph showing 'constellations' notes separated by tiers of rep score. Looks like gravity}
+\caption{Figure of the tiered cluster hierarchy: a top down look at the graph showing 'constellations' notes separated by tiers of rep score. Reuse image from the data model article.}
 \includegraphics[width=8cm]{yo_dawg}
 \centering
 \end{figure}
@@ -77,13 +83,6 @@ where $M$ is a manifold, $\epsilon$ is the sheaf of the vector space of rank $r$
 \end{split}
 \end{equation*}
 
-\begin{figure}[h]
-\caption{Formulate a ringed space as a hashmap and how each key is like a basis. If there are collisions there is like a singularity that appears. Sheaves are like subsets of the hashmap and represents the newest state of the partition of unity (sheaves are charts)}
-\includegraphics[width=8cm]{yo_dawg}
-\centering
-\end{figure}
-
-
 where each $\Gamma^{\epsilon}$ is a manifold corresponding to a rank in the differential form above, subordinate to the rank before it. If we define bandwidth (fiber/sec) as the total space\footnote{sec 9.2 \url{ftp.cis.upenn.edu/pub/cis610/public_html/diffgeom4.pdf}} of the resources given by each node
 \begin{equation*} \label{eq1}
 \begin{split}
@@ -91,7 +90,9 @@ B_{(\frac{fiber}{sec})} = \sum_{r} \int \rho_i \theta_i \omega
 \end{split}
 \end{equation*}
 
-where $\rho_i$ is a partition of unity and $\theta_i$ is a discrete diffeomorphism (protocol) on our r-form $\omega$ and fibers are Signed Observation Edges\footnote{link to arch blog post} of our data model. (make sure to elaborate that the total space is made up of all actions and the diffeomorphism itself is what determines the solution plane once we solidify into a snapshot. It is essentially a cut on the graph where we keep a subset of bundles not cut as tips new bundles are latched on. The diffeomorphism
+where $\rho_i$ is a partition of unity and $\theta_i$ is a discrete diffeomorphism (equivalent to the protocol) on our r-form $\omega$ and fibers are Signed Observation Edges\footnote{link to arch blog post, same as in figure} of our data model. 
+
+(make sure to elaborate that the total space is made up of all actions and the diffeomorphism itself is what determines the solution plane once we solidify into a snapshot. It is essentially a cut on the graph where we keep a subset of bundles not cut as tips new bundles are latched on.
 
 The actual value of our network can be described as the cost to host the resources each node provides. 
 \begin{equation*} \label{eq1}
@@ -103,7 +104,7 @@ R_{(\frac{\$}{sec})} = \sum_{r} \int \rho_i T_i \omega
 This is a slight modification to our definition of bandwidth above by replacing $\theta$ with $T$ a mapping to instance types and cost. The total space of all value per node is given by the product of R and B, however in order to give a some measure of performance, we can do this by mapping each entry in the bandwidth space to it's normalized Shannon entropy (bits), giving us a measure of relative information gain to cost.
 \begin{equation*} \label{eq1}
 \begin{split}
-S_{(\frac{bits*\$}{sec})} = B_{entropy} \oplus R = (\sum_{r} \int \rho_i H_i \omega ) \oplus R
+S_{(\frac{bits}{\$})} = R^\top  \boldsymbol{\cdot} B_{entropy} = R^\top  \boldsymbol{\cdot}  (\sum_{r} \int \rho_i H_i \omega )
 \end{split}
 \end{equation*}
 
@@ -115,6 +116,11 @@ H_n(p) = - \sum_i \frac{p_i log_b p_i}{log_b n}
 \end{equation*}
 and $p$ is a probability measure of how the result of a node's actions deviate from the acceptable state of the protocol and $b$ is our base, bits in the case of Shannon entropy. Deficiency in entropy can be seen as a measure of efficiency. We want to use normalized entropy as using normal Shannon entropy scales with sample size.
 
+\section{Resulting Dynamics}
+Just a smattering of the original, economic, argument. Describe how the above results in the following market/network dynamics.
+
+
+This definition could be paraphrased as essentially a game where the rules of play enforce certain invariants, the result of which is emergent stabilization. Essentially, the act of playing the game itself is what enforces the invariant. Distributed consensus protocols, and the currencies they support, can be modeled as generative economies. Network stability is governed by eventually consistent equilibrium and equilibrium is defined in terms of invariant measures (we want to enforce that something doesn't change, or can be relied upon) that are maintained. Why do we need this? It allows for the the enforcement of real world performance specifics that are decoupled from external market dynamics (gas/exchange prices) which allows for technology focused adoption while also providing an external speculation market similar to traditional commodities markets.
 
 
 \bibliographystyle{plain}
