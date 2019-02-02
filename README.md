@@ -1,5 +1,7 @@
 ## Economic Model
-We dicusses the incentivization model of the Constellation protocols's DAG token. We first discus our influences and tie the ideas back to the structure layed out in the business-whitepaper, before we discuss the arising economics and reflect on the mathematical abstractions introduced previously. 
+We dicusses the incentivization model of the Constellation protocols's DAG token. We first discus our influences and tie the ideas back to the structure layed out in the 
+[/business-whitepaper](https://github.com/Constellation-Labs/whitepaper-business), 
+before we discuss the arising economics and reflect on the mathematical abstractions introduced previously. 
 
 As the network expands in a self-similar fashion and as liquidity is injected by the reserve and the supply, the question arises how the utility value of projects on the platform grow with it. 
 We propose the Constellation Token Model, a sustainable protocol inspired by generative economies and aimed at producing inherent utility value for the token in the network. In it, the $DAG token as a digital commodity opens the opportunity to well established and known market dynamics. The generation and perpetuation of true utility can be likened to the production of a real-world commodity. A core role of $DAG is as a credit to access network resources in the absence of reputation, the latter of which one may obtain by hosting a node and maintaining a seeder-leeched-ratio.

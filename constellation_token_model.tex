@@ -44,9 +44,11 @@
 \maketitle
 
 \begin{abstract}
-We propose the Generative Tokenomics, a validator rewards model that adapts according to dynamic network organization. In it, the $DAG token as a digital commodity opens the opportunity to well established and known market dynamics. The generation and perpetuation of true utility can be likened to the production of a real-world commodity. A core role of $DAG is as a credit to access network resources in the absence of reputation, the latter of which one may obtain by hosting a node and maintaining a seeder-leeched-ratio.
+We propose the Generative Tokenomics, a validator rewards model that adapts according to dynamic network organization. In it, the \$DAG token as a digital commodity opens the opportunity to well established and known market dynamics. The generation and perpetuation of true utility can be likened to the production of a real-world commodity. A core role of the token is as a credit to access network resources in the absence of reputation, the latter of which one may obtain by hosting a node and maintaining a seeder-leeched-ratio.
 
-We first discus our influences and tie the ideas back to the structure layed out in the business-whitepaper, before we discuss the arising economics and reflect on the mathematical abstractions introduced previously. 
+We first discus our influences and tie the ideas back to the structure layed out in the Constellation business whitepaper
+\footnote{Constellation business-whitepaper (2018)\\ https://github.com/Constellation-Labs/whitepaper-business}, 
+before we discuss the arising economics and reflect on the mathematical abstractions introduced previously. 
 \end{abstract}
 
 \setcounter{secnumdepth}{0}
@@ -57,7 +59,9 @@ Consensus protocols with a linear data model have fallen short in terms of scala
 
 In order to apply the utility of a distributed consensus protocol to scalable backends, they must be fully compatible with dynamic scaling/deployment features such as elastic deployment and dynamic partitioning. As the backbone to these systems is the economic incentive to provide computational resources, a key requirement is the ability for their validator rewards models to dynamically adjust in tandem with network organization. An emerging class of consensus protocols-of which the Constellation Protocol is a type of-overcome these limitations with a nonlinear data model known as a directed acyclic graph (DAG).
 
-For nonlinear protocols, Generative Economics is a comparably dynamic economic model. A Generative Economy is a living economy that is designed to generate the conditions for life to thrive, an economy with a built-in tendency to be socially fair and ecologically sustainable \footnote{Kelly, Marjorie, "Toward A Generative Economy" https://www.opendemocracy.net/ourkingdom/marjorie-kelly/toward-generative-economy}. The Constellation Protocol embodies this ethos in facilitator selection mechanism which is based on meritocratic reputation system and its validator rewards model. Validator rewards adjust as nodes join or leave and increase or decrease their contribution.
+For nonlinear protocols, Generative Economics is a comparably dynamic economic model. A Generative Economy is a living economy that is designed to generate the conditions for life to thrive, an economy with a built-in tendency to be socially fair and ecologically sustainable 
+\footnote{Kelly, Marjorie, ``Toward A Generative Economy'' \\ https://www.opendemocracy.net/ourkingdom/marjorie-kelly/toward-generative-economy}. 
+The Constellation Protocol embodies this ethos in facilitator selection mechanism which is based on meritocratic reputation system and its validator rewards model. Validator rewards adjust as nodes join or leave and increase or decrease their contribution.
 
 \section{A Generative Tokenomic Model}
 In Constellation, utility is given not only by oraclization-immutable notarization and the application of consensus to validate data-but also by throughput, or the rate at which data is notarized and validated. Like all consensus protocols, access to rewards is governed by facilitator selection. In turn facilitator selection is governed by a decentralized locality sensitive hashing mechanism which organizes the network by a utility (seeder/leacher) ratio of transactions validated vs transactions submitted. Reputation is equivalent to the throughput a facilitator has provided vs the throughput used (as well as the efficacy of oraclization-notarization and validation). As nodes participate they are ranked based on their reputation. The magnitude of rewards and reputation is proportional to rank. Fees are charged relative to the scarcity of the throughput and are only charged if an account breaches its allotted utility ratio. The \$DAG token acts as a credit mechanism like cash, which, like gas
@@ -68,7 +72,7 @@ The dimensionality of reputation is equivalent to a volume of computational spac
 
 \section{Validator Rewards in Constellation}
 Constellation's data model was designed to follow combinatorial models in distributed computing, where network state can be described in terms of simplicial geometry and transitions are defined in terms of a discreet gradient. This is advantageous as it allows a numerical correspondence to placement within a network of hierarchical mesh topology
-\footnote{\url{http://faculty.kfupm.edu.sa/coe/marwan/richfiles/Designing\%20a\%20Network\%20Topology.pdf}}, 
+\footnote{KFUPM chapter on designing a network topology, see chapter 5\\ \url{http://faculty.kfupm.edu.sa/coe/marwan/richfiles/Designing\%20a\%20Network\%20Topology.pdf}}, 
 which is optimal for a highly available network of heterogeneous devices.
 
 The value of our network derives from the total computational space (volume of network resources) available for verifying transactions i.e. its maximum throughput. Since our data model is a data dependency graph with hashes linking collections of data, we can equate value to the total amount of storage space that it can contain. Thus we use a calculation of the 'volume' of an account's contributions (signed observation edges) relative to the total volume of the data dependency graph to define validator rewards (reputation and \$DAG). We then weight this contribution by its relative information gain or its measure of entropy, lowest being best, according to the distribution of all accounts' entropy measures. For note, an account can be attributed to multiple nodes.
@@ -83,13 +87,13 @@ The volume of 'space' of nodes across ranks $1 \dots r$
 \end{equation*}
 
 \begin{figure}[h]
-\caption{Hierarchical Mesh topology. Original from M.H.Abu-Amara$^3$}%make sure to update this footnote maually
-\includegraphics[width=8cm]{Designing_a_network_topology-M_H_Abu-Amara}
 \centering
+\includegraphics[width=8cm]{Designing_a_network_topology-M_H_Abu-Amara}
+\caption{Hierarchical Mesh topology. Original from M.H.Abu-Amara$^3$}%make sure to update this footnote maually
 \end{figure}
 
 where $M$ is a manifold, $\epsilon$ is the basis of the vector space of rank $r$. Each collection in the data dependency graph has the basis and rank of the node that emitted it. Within our model this would be explicitly defined as the numerical integration over the outer product of our cohomological definition
-\footnote{https://arxiv.org/abs/1805.07047} 
+\footnote{Blockchain cohomology text\\ https://arxiv.org/abs/1805.07047} 
 which is a vector space given by the tensor product of each space across ranks
 \begin{equation*} \label{eq1}
 \begin{split}
@@ -97,8 +101,9 @@ which is a vector space given by the tensor product of each space across ranks
 \end{split}
 \end{equation*}
 
-where each $\Gamma^{\epsilon}$ is a manifold corresponding to a rank in the differential form above, subordinate to the rank before it. If we assume a uniform data transmission, we can define bandwidth (SOE/sec) as the total space\footnote{sec 9.2 \url{ftp.cis.upenn.edu/pub/cis610/public_html/diffgeom4.pdf}} of the resources given by each node
-
+where each $\Gamma^{\epsilon}$ is a manifold corresponding to a rank in the differential form above, subordinate to the rank before it. If we assume a uniform data transmission, we can define bandwidth (SOE/sec) as the total space
+\footnote{ftp.cis.upenn text on diff. geo., see sec 9.2\\ \url{ftp.cis.upenn.edu/pub/cis610/public_html/diffgeom4.pdf}} 
+of the resources given by each node
 \begin{equation*} \label{eq1}
 \begin{split}
 B_{(\frac{\mathrm{SOE}}{\mathrm{sec}})} = \sum_{r} \int \rho_i\, \theta_i\, \omega
@@ -106,7 +111,7 @@ B_{(\frac{\mathrm{SOE}}{\mathrm{sec}})} = \sum_{r} \int \rho_i\, \theta_i\, \ome
 \end{equation*}
 
 where $\rho_i$ is a partition of unity and $\theta_i$ is a discrete diffeomorphism (the effect that the protocol has on the total configuration space) on our r-form $\omega$ and SOEs are Signed Observation Edges
-\footnote{\url{https://constellationlabs.io/blog/index.php/how-constellation-is-different-than-blockchain/}} 
+\footnote{constellationlabs.io blog\\ \url{https://constellationlabs.io/blog/index.php/how-constellation-is-different-than-blockchain/}} 
 linking collections in our data dependency graph.
 
 We determine a measure of performance, by mapping each entry in the bandwidth space to its normalized Shannon entropy (bits), giving us a measure of relative information gain.
@@ -123,7 +128,7 @@ H_n(p) = - \sum_i \frac{p_i \log_b p_i}{\log_b n}
 \end{split}
 \end{equation*}
 and $p$ is a probability measure of how the result of a node's actions deviate from the acceptable state of the protocol and $b$ is our base, bits in the case of Shannon entropy. Deficiency in entropy can be seen as a measure of efficiency. Normalized entropy is advantageous as it scales with sample size and has shown effective at anomaly detection in networks
-\footnote{Karthik, P "Detecting Anomalies Based On Entropy-Estimation"\\ \url{http://ijsetr.org/wp-content/uploads/2013/07/IJSETR-VOL-2-ISSUE-4-910-915.pdf}}.
+\footnote{Karthik, P. ``Detecting Anomalies Based On Entropy-Estimation''\\ \url{http://ijsetr.org/wp-content/uploads/2013/07/IJSETR-VOL-2-ISSUE-4-910-915.pdf}}.
 
 \section{Results}
 The Constellation validator rewards model forms a well defined feature space for defining a reputation model, which is core to reputation based consensus. Facilitator selection is governed by this model which optimizes the network topology bases on the performance of each node. By tying optimal network organization to the criteria for facilitator selection, such a model embodies the adaptive qualities of a Generative economic model.
