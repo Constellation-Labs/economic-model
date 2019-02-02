@@ -89,7 +89,7 @@ which link collections in our data dependency graph, is a quantifier for this pe
 \caption{Hierarchical Mesh topology. Original from M.H.Abu-Amara$^3$} %make sure to update this footnote maually
 \end{figure}
 
-We close the text by expressing the above ideas using terminology from previous motivations mentioned in the Constellation whitepaper.\\
+We close the text by expressing the above ideas using terminology from previous motivations mentioned in the Constellation whitepaper. \\
 If we consider each Signed Observation Edge as a basis of given rank $r$ in the space of the data dependency graph, we can calculate this volume as the integral over the outer product space of these basis, which is a differential r-form.
 The notion of volume of space of the nodes across ranks $1 \dots r$ is
 \begin{equation*} \label{eq1}
@@ -110,7 +110,8 @@ of the resources given by each node
 B_{\mathrm{SOE}/\mathrm{s}} = \sum_{i\,\in\,\{1, \dots, r\}} \int \rho_i\, \theta_i\, \omega
 \end{split}
 \end{equation*}
-where $\rho_i$ is a partition of unity and $\theta_i$ is a discrete diffeomorphism on our spaces $r$-form, $\omega$. This amounts to the effect that the protocol has on the total configuration space.\\
+where $\rho_i$ is a partition of unity and $\theta_i$ is a discrete diffeomorphism on our spaces $r$-form, $\omega$. This amounts to the effect that the protocol has on the total configuration space.
+
 We determine a measure of performance, by mapping each entry in the bandwidth space to its normalized Shannon entropy (bits), giving us a measure of relative information gain:
 \begin{equation*} \label{eq3}
 \begin{split}
@@ -118,7 +119,7 @@ B_\mathrm{entropy} = \sum_{r} \int \rho_i\, H_i\, \omega
 \end{split}
 \end{equation*}
 Here 
-{$H_n(p) = - \tfrac{1}{\log_b(n)} \sum_i p_i \log_b(p_i)$}
+{$H_i(p) = - \tfrac{1}{\log_b(i)} \sum_j p_j \log_b(p_j)$}
 is the normalized Shannon entropy, where $p$ is a discrete probability measure of how the result of a node's actions deviate from the acceptable state of the protocol and $b$ is our base. The later is binary, as we deal with bits. Reduction in entropy can be seen as a measure of efficiency. Normalized entropy is advantageous as it scales with sample size and has shown effective at anomaly detection in networks
 \footnote{Karthik, P. ``Detecting Anomalies Based On Entropy-Estimation''\\ \url{http://ijsetr.org/wp-content/uploads/2013/07/IJSETR-VOL-2-ISSUE-4-910-915.pdf}}.
 
