@@ -1,6 +1,6 @@
 import unittest
 
-from balance_transition_calculator import *
+from balance_transition import *
 
 error_bounds = 0.01
 
@@ -9,7 +9,7 @@ class TestEvolution(unittest.TestCase):
 
     def test_random_rewards_distribution(self):
         channel_space = random_rewards_distribution(num_channels=channel_count)
-        self.assertEqual(sum(channel_space), 1.0, "rewards manifold should be normalized")
+        self.assertLessEqual(sum(channel_space) - 1.0, error_bounds, "rewards manifold should be normalized")
 
     def test_rewards(self):
         address_vectors = np.array(

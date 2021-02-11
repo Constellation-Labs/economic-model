@@ -1,4 +1,4 @@
-from matrix_ops import *
+from balance_transition_utils import *
 
 
 def proof_of_work(rewards, validator_map, address_space, token_name):
@@ -32,8 +32,8 @@ def shared_work(rewards, validator_map, address_space, token_name):
 
 def compound_work(rewards, validator_map, address_space, starting_balances, token_name):
     '''
-    rewards model where rewards are shared amongst the addresses in the liquidity pool by a compounding factor
-    todo in this case the compounding factor is stake or fraction of total ownership
+    rewards model where rewards are shared amongst the addresses in the liquidity pool by a compounding factor. Note
+    that in this case the compounding factor is stake or fraction of total ownership
     :return:
     '''
     channels = list(validator_map.keys())
