@@ -82,7 +82,7 @@ class ConsensusTopos():
 
     def coherence_complex(self):
         """
-        Calculate disorder between ideal and stateful simplicial complex.
+        Calculate disorder between ideal and stateful simplicial complex. See https://arxiv.org/pdf/1603.07135.pdf
 
         note that the protocol complex is a rips complex as edges are formed from points that have a distance metric
         given by cryptographic hash.

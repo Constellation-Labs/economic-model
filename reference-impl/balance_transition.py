@@ -123,6 +123,7 @@ def market_flux_transformation(transitive_flux_pairs):
 if __name__ == "__main__":
     hyper_graph_liquidity_manifold = np.array(hyper_graph_internal_liquidity_graph)[np.newaxis, :]
     initial_balance_distribution = random_balance_distribution()
+    # pretty_print(initial_balance_distribution)
     rewards_manifold = distro_rewards(initial_balance_distribution)
     final_state = initial_balance_distribution + rewards_manifold
     price_index_point_change = external_pair_flux_tensor()

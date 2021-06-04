@@ -16,6 +16,9 @@
 \usepackage{physics}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{quiver}[2020/11/27 quiver]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
 
 % `tikz-cd` is necessary to draw commutative diagrams.
 \RequirePackage{tikz-cd}
@@ -80,7 +83,7 @@
 
 \graphicspath{ {./images/} }
 
-\title{Generative Economics and The Generative Calculus:\\ An Economic System for Autonomous Social Infrastructure}
+\title{Generative Calculus and the economic theory of Generativity}
 \author{Wyatt L. Meldman-Floch}
 \date{December 21, 2020}
 \setlength{\parskip}{1em}
@@ -89,7 +92,7 @@
 \maketitle
 
 \begin{abstract}
-A new economic system designed to maximize the utility of autonomous infrastructure is presented.
+A new economic system designed to maximize the utility through autonomous infrastructure is presented.
 A global interpreter for interaction and deployment of this infrastructure as well as an associated programming language specification is constructed.
 These constructions are then used to define the "Economic Engine" and via the Second Law of Thermodynamics prove that the stability of the economy is proportional to the efficiency and volume of resources provided to host it.
 
@@ -99,60 +102,10 @@ These constructions are then used to define the "Economic Engine" and via the Se
 
 \setcounter{secnumdepth}{0}
 
-\section{Introduction}
-The following is a new economic system designed as an evolution of the economic system of Capitalism into a self regulating Generative Economy\footnote{Kelly, Marjorie, ``Toward A Generative Economy'' \\ https://www.opendemocracy.net/ourkingdom/marjorie-kelly/toward-generative-economy}: a living economy designed to generate the conditions for life to thrive and with a built-in tendency to be socially fair and ecologically sustainable.
-Ironically a similar concept of exists in both human psychology (Generativity) and mathematics (Generative Effects\footnote{David Spivak, Brendan Fong, ``Seven Sketches in Compositionality'' \\ https://math.mit.edu/~dspivak/teaching/sp18/7Sketches.pdf}).
-As such a tall order, it seems warranted to define the context within such a model was created. 
-In the year 2020, humanity has excelled into what has contemporarily been dubbed the 4th industrial revolution.
-An industrial evolution is typically defined by a technological breakthrough that improves the scalability of the means of production. 
-The 4th has been characterized as the blending of the physical, digital and biological worlds.
-The conduit for such synthesis is undoubtedly the constant bombardment of computer screens into our fields of vision.
-These black mirrors are meant to connect us in a global context of situational awareness: a shared reality.
-However, without verification of the data that comprises the digital world, these reality sharing devices have become reality distortion machines.
-Analysis of contemporary social and news media denominates clearly that individuals walk side by side physically, yet their mental realities are bifurcated along the lines of division that separate the sources of data in the digital world.
-In truth, this is caused by malicious actors seeking to compromise the sovereignty of the individual.
-Individual sovereignty is the bedrock of the economic system of Capitalism as "rational actors" require sovereignty to act rationally in their best interest.
-From this lens, Capitalism today is really more of an ideal like Communism which has never been implemented in purity.
-Activated individual sovereignty is the fundamental requirement to make markets actually free.
-However, protecting individual sovereignty requires a collectively shared context from which the sovereign can reason; an emodyment of Hegel's definition of reality.
-As will be shown by the end of this work, the solution to this "Reality Problem" is creating a new internet architecture that functionally extends the electromagnetic fields outside of the physical servers themselves by processing digital data with the same mechanics as analogue.
-Specifically, data flows are constructed using the Day Convolution, a digital equivalent of the Fourier transformation, allowing for state proofs to be verified using a cryptographic equivalent of Error Correction Codes.
 
-\subsection{Circumstances Shaping Industrial Revolution}
-But before heading into the construction, more context can be added as to how we got here and why solving the 4th industrial revolution's "incongruity problem" is paramount.
-As to how we got here, it's worth looking at arguably the biggest influence on western political philosophy since the age of enlightenment, at least to America's Founding Fathers: Rousseau's Social Contract.
-Rousseau's Social Contract was an embodiment of humanity's understanding of reality; both scientific and simply factual. Most societies were not even aware of planetary geography yet alone each other.
-It was simply understood that earth was endless and full of limitless resources.
-This presupposition that, at the time of writing, we are painfully aware is inaccurate.
-Moreover, the field of human psychology had not been founded and human beings were considered inherently flawed self interested amoral beings; the motivations for a person's actions could not be identified as mental illness or social disorder.
-The main tenant of the Social Contract, was that a supreme authority needed to govern the actions of society lest it fall into chaos. Thus, the most moral avenue to do so was to make this governance as unnoticeable as possible ("Invisible Shackles").
-Rousseau wrote these ideas during his time in Paris which was a notably raucous period and his inspiration for the invisible shackles was to reconcile the Parisian free spirit with the unity of his home town of Geneva which was notorious for its piety and social order.
-He believed that the state could perform the act that the almighty did in Geneva to arbitrate a "Contract" that each human is essentially assigned at birth, where that contract defines personhood and responsibilities to the state. 
-Essentially the thesis is that humans are too dangerous to be allowed access to their own sovereignty, decoupling the concept of the sovereignty from personhood into  "the sovereign" which is equivalent to statehood.
 
-Unfortunately, governments are not as immune to corruption as the concept of "God".
-Thus as we have seen since the Social Contract's inception the socioeconomic systems of the nations that emerged share a consistent narrative of recklessness, dehumanization and schadenfreude; facilitated by a ruling class typically differentiated by generational wealth.
-Within this context it is clear how the ethos of Imperialism lives within edicts such as Manifest Destiny, which are embodied even today in the burgeoning field of space law. 
-
-The necessity for a fundamental socioeconomic consciousness shift in order to evolve into an interstellar species was notably characterized by R. Buckminster Fuller and his work on Synergetics.
-Fuller characterized the development in terms of ordered stages.
-Type 0 (which is what we are now) is a species confined to its original origin and have a limited time to "get their shit together" or otherwise face extinction due to an inability to cooperate in the distribution and access to resources.
-Type 1 civilizations on the other hand have evolved into a self sufficient cooperative that has expanded their home to the cosmic ecosystem. 
-These ideas are detailed concretely in his book Critical Paths and there are even accompanying materials such as "World Game" for children and community organizing tactics for a social movement to Type 1.
-The main takeaway from Critical Paths is that it's not enough to develop the technology for space travel; we need to develop the socioeconomic technology to facilitate cooperation amongst a decentralized extra terrestrial species. 
-
-Lofty visions of special unity have been lauded for many purposes and in many ways, such as Ray Kurzweil's Singularity.
-However, without the emotional technology to preserve the sovereignty of the individual, a Singularity as such implies an irreversibility to tenants of its embodying society.
-Is it even possible to reclaim our individual sovereignty or even get it together in time to make it off planet?
-A belief that is core to the rest of this paper and held by the author is yes.
-What if it were possible to create a verifiable reality that could arbitrate a new social contract?
-A social contract defined by its prioritization of humanization, sovereignty and simply put: what we cherish about being human.
-
-The following constructions and proofs are a reformulation of "Statehood" in terms of public social infrastructure that autonomously self regulates.
-Such infrastructure removes the necessity for human intervention in the arbitration of the Social Contract, i.e. legislation and law enforcement etc.
-By enabling the principal of "Code as Law", this infrastructure can arbitrate the tenants of the Social Contract, now defined by verifiable computer code, removing unsustainable relics in our current social fabric.
-Specifically, Generative Economics is presented as a solution to one specific aspect of the "reality problem": Economic Arbitrage.
-More concretely, we will see that the solution an engine that extracts utility from the data passing across the digital world and the synergetic orchestration of autonomous network infrastructure.
+\section{Acknowledgments}
+In loving memory of Leonard Meldman and Jim Valentine.
 
 \section{The Generative Calculus}
 The context within which our model exists are recent advancements in distributed ledger technology, namely Cryptocurrencies.
@@ -160,17 +113,20 @@ Traditionally a Cryptocurrency is just a speculative asset like a security that 
 The following is a reformulation of Cryptocurrencies as a commodification of the utility provided by a distributed consensus protocol.
 
 The recent advancements in distributed ledger technology alluded to revolve around scalability.
-Consensus protocols with a linear/block data model such as Bitcoin and Ethereum are fundamentally incompatible with the advent of microservice architectures. 
+Consensus protocols with a linear/block data model such as Bitcoin and Ethereum are fundamentally incompatible with the advent of microservice architectures which define the paradigm of network architecture for large scale data processing systems. 
 In most cases they are distributed systems that operate in serial, which is antithetical to the concurrent underpinnings of distributed systems; horizontal scalability and efficient data locality. 
-In order to apply the utility of a distributed consensus protocol to scalable backends, they must be fully compatible with dynamic scaling and deployment features such as elastic deployment and dynamic partitioning.
-As the backbone to these systems is the economic incentive to provide computational resources, a key requirement is the ability for their validator rewards models to dynamically adjust in tandem with network organization.
+In order to apply the utility of a distributed consensus protocol to large scale data processing systems, they must be fully compatible with dynamic scaling and deployment features such as elastic deployment and dynamic partitioning.
+As the backbone to Cruyptocurrencies the economic incentive to provide computational resources, a key requirement is the ability for their validator rewards models to dynamically adjust in tandem with network organization.
 An emerging class of consensus protocols overcome these limitations with a nonlinear data model known as a directed acyclic graph (DAG.)
-HGTP, the core technology developed from the Cohomology Theory of Blockchain Technology and backbone of the HyperGraph Network will be referenced periodically throughout the rest of this work as a real world example of these principles.
+HGTP, the core technology developed from the Cohomology Theory of Blockchain Technology and backbone of the HyperGraph Network will be referenced periodically throughout the rest of this work as a real world technology that implement these principles.
+
+The following constructions form a calculus, namely the Calculus of Generations, which apply to dynamical systems of generative effects. 
+As has been shown in previous works, consensus protocols are equivalently described via the category of chain complexes which map directly to generative effects. Generative Calculus allows for geometric representation and analysis of quantities defined by generative effects, which are then used in the next section to define a macroeconomic theory of market stability for Cryptocurrencies that is an extension of The Economic Theory of General Equilibrium.
 
 \subsection{The Category of Differentiable Consensus Protocols}
 First, let's construct a universal context to axiomatize the mechanics of distributed consensus protocols by employing the principle construction of Blockchain Cohomology: the Poincare Complex.
 The Poincare Complex is a generic combinatorial model for consensus systems, where network state is described in terms of simplicial geometry and transitions are defined in terms of a discrete gradient. 
-Its main advantage is that it symbolically represents the requirements for consensus protocols to be defined recursively, forming a network with hierarchical mesh topology\footnote{KFUPM chapter on designing a network topology, see chapter 5\\ \url{http://faculty.kfupm.edu.sa/coe/marwan/richfiles/Designing\%20a\%20Network\%20Topology.pdf}}, which is optimal for a highly available network of heterogeneous devices, in its definition as a Functorial Operator.
+Its main advantage is that it symbolically represents the requirements for consensus protocols to be defined recursively, forming a network with hierarchical mesh topology\footnote{KFUPM chapter on designing a network topology, see chapter 5\\ \url{http://faculty.kfupm.edu.sa/coe/marwan/richfiles/Designing\%20a\%20Network\%20Topology.pdf}}, which is optimal for a highly available network of heterogeneous devices in its definition as a Functorial Operator.
 The Poincare Complex was constructed using the language of algebraic topology because it simplifies correctness proofs into constructivist logic (proof by construction) by reducing the context of the problem to spaces.
 However, the converse is true in classifying instances of a Poincare Complex.
 Fortunately, due to the focus on homotopy types in the construction of the Poincare Complex, there is an equivalent construction by means of a category, which will soon be defined as the Category of Consensus Protocols.
@@ -178,12 +134,13 @@ Category theory is helpful in that it organizes, frames, and contextualizes info
 The Category of Consensus Protocols can then be extened to create a "universal construction" that allows for mappings across or compositions of Consensus Protocols that retain the same guarantees as the starting Consensus Protocols, by means of defining a particular functor.
 Functors are mappings between categories which are used to define this notion of equivalence. 
 Let's use this functorial operator to construct a proper category and use the functors of this category to define a universal context for Consensus Protocols.
-First, consider the Poincare Complex
+
+Consider the Poincare Complex
 \begin{equation}
 \Omega^T_\Gamma: 0 \xleftrightarrow{\partial} \Omega^{T^*}_{\Gamma^*}(\epsilon) \xleftrightarrow{\partial} \Omega^T_\Gamma (\epsilon(P_0)) \dots \Omega^T_\Gamma (\epsilon(P_\pi))
 \end{equation}
-where $\Omega^T_\Gamma$ is a functor obeying the laws of the Protocol Manifold\footnote{Meldman-Floch, Wyatt, ``Blockchain Cohomology: Sec 23' \\ http://ceur-ws.org/Vol-2478/paper2.pdf} and Protocol Topology\footnote{Meldman-Floch, Wyatt, ``Blockchain Cohomology: Sec 2'' \\ http://ceur-ws.org/Vol-2478/paper2.pdf} and functoral group homomorphisms gHylo, a generalization of Hylomorphism that allows any combination of refolds out of comonadic recursion schemes\footnote{Patrick Thomson, ``recursion-schemes-part-6' \\ https://blog.sumtypeofway.com/posts/recursion-schemes-part-6.html}. These refolds are all defined as a combination of catamorphism and anamorphism where the f-algebra and f-coalgebra dual, which maintain Poincare duality of the protocol manifold up to $\pi$ isomorphism. 
-In terms of $\Sigma$ and $\epsilon$, noting that our functor $\Sigma$ is a valid f-algebra and sheaf $\epsilon$ a co-algebra, is a combination of the following:
+where $\Omega^T_\Gamma$ is a functor obeying the laws of the Protocol Manifold\footnote{Meldman-Floch, Wyatt, ``Blockchain Cohomology: Sec 23' \\ http://ceur-ws.org/Vol-2478/paper2.pdf} (or the data structure of State Data governed by the protocol), Protocol Topology\footnote{Meldman-Floch, Wyatt, ``Blockchain Cohomology: Sec 2'' \\ http://ceur-ws.org/Vol-2478/paper2.pdf} (the organization of the physical machines themselves) and functoral group homomorphisms gHylo, a generalization of Hylomorphism that allows any combination of refolds out of comonadic recursion schemes\footnote{Patrick Thomson, ``recursion-schemes-part-6' \\ https://blog.sumtypeofway.com/posts/recursion-schemes-part-6.html}. These refolds are all defined as a combination of catamorphism and anamorphism where the f-algebra and dual f-coalgebra which maintain Poincare duality of the protocol manifold up to $\pi$ isomorphism. 
+In terms of $\Sigma$ and $\epsilon$, where the functor $\Sigma$ is a valid f-algebra and sheaf $\epsilon$ a co-algebra, this combination forms the "Gather Apply Scatter."
 
 A Hylomorphism or "Gather Apply"
 \begin{equation}
@@ -193,16 +150,22 @@ and Metamorphism which is a valid refold or a "Scatter"
 \begin{equation}
 \Omega_\Gamma(P, \epsilon):\Gamma_\Sigma \times \epsilon \rightarrow P
 \end{equation} 
-which are constructions that encapsulate the two directions of the distributive laws required for a commutative monad\footnote{gelisam, "use Gather/Scatter instead of distributive laws", \\ https://github.com/ekmett/recursion-schemes/pull/51} in syntax more natural in functional programming; further examples of gHylo constructions can be found in Tessellation\footnote{buckysballs, "name of pr", \\ https://github.com/tessellation/}.
-Note, any refold satisfying duality of recursion is a valid Scatter.
+are constructions that encapsulate the two directions of the distributive laws required for a commutative monad\footnote{gelisam, "use Gather/Scatter instead of distributive laws", \\ https://github.com/ekmett/recursion-schemes/pull/51} as is known in functional programming; further examples of gHylo constructions can be found in Tessellation\footnote{buckysballs, "name of pr", \\ https://github.com/tessellation/}.
+Note that any refold satisfying duality of recursion is a valid Scatter.
 
-The original construction used the sheaf cohomology of synthetic differential geometry to create a topological space classified by homotopy equivalence between state spaces, where homotopy is defined by functor algebra invariants. Specifically the most basic invariants are the homotopy group $\pi$, the homology group $\Omega_\Gamma$ and cohomology group $\Omega^T$.  
-These invariants assign a group structure to a space and specifically as defined by blockchain cohomology, a graded abelian algebra.
+The original construction of the Poincare Complex used the sheaf cohomology of synthetic differential geometry to create a topological space classified by homotopy equivalence between "state spaces", where homotopy is defined by functor algebra invariants. Specifically the most basic invariants are the homotopy group $\pi$, the homology group $\Omega_\Gamma$ and cohomology group $\Omega^T$.  
+These invariants assign a group structure to a space with graded abelian algebra.
 But they also define a homomorphism (a map of groups) to each map of spaces. 
 This feature allows us to transfer comparisons between spaces (the role of maps in topology) to comparisons between groups.
+
+\begin{theorem}
+$\pi$, $\Omega_\Gamma$ and $\Omega^T$ are functors from the category of topological spaces to the category of groups
+\end{theorem}
+
+\begin{proof}
 It is equivalent to say that $\pi$, $\Omega_\Gamma$ and $\Omega^T$ are functors from the category of topological spaces to the category of groups, because for each $k$ the following commutative diagrams commute:
 
-Proof: composition of $\Omega_\Gamma$
+Composition of $\Omega_\Gamma$
 % https://q.uiver.app/?q=WzAsNixbMCwwLCJYIl0sWzIsMCwiWSJdLFsyLDIsIlxccGlfayhZKSJdLFswLDIsIlxccGlfayhYKSJdLFsxLDJdLFszLDIsIlxcYnVsbGV0Il0sWzAsMywiXFxwaV9rIiwyXSxbMywyLCJcXHBpX2soZikiXSxbMCwxLCJmIl0sWzEsMiwiXFxwaV9rKGYpIl1d
 \[\begin{tikzcd}
 	{X} && {Y} \\
@@ -214,7 +177,7 @@ Proof: composition of $\Omega_\Gamma$
 	\arrow["{\pi_k(f)}", from=1-3, to=3-3]
 \end{tikzcd}\]
 
-Proof: composition of $\Omega^T$
+Composition of $\Omega^T$
 % https://q.uiver.app/?q=WzAsNSxbMCwwLCJYIl0sWzIsMCwiWSJdLFsyLDIsIlxcT21lZ2FeayhZKSJdLFswLDIsIlxcT21lZ2FeayhYKSJdLFsxLDJdLFswLDMsIlxcT21lZ2FeayIsMl0sWzMsMiwiXFxPbWVnYV5rKGYpIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwxLCJmIl0sWzEsMiwiXFxPbWVnYV5rIl1d
 \[\begin{tikzcd}
 	{X} && {Y} \\
@@ -232,15 +195,20 @@ $\bullet$ Axiom A) A class of objects $Ob(C)$
 
 $\bullet$ Axiom B) For any two objects $X$ and $Y$ $\in Ob(C)$, a class of morphisms (or equivalently maps/arrows) $Hom_C(X,Y)$ for some $ f: X \rightarrow Y$ and for an element $f \in Hom_C(X,Y)$ such that there is a composition function $Hom_C(X,Y) \times Hom_C(Y, Z) \rightarrow Hom_C(X, Z)$ $=>$ $(f, g) \rightarrow g \circ f$ that satisfies the usual associativity and identity axioms.
 
-Lets define the Category of Consensus Protocols and prove that it is indeed a Category, specifically a Category of sheaves.
-Proof by Construction: define the Category of Consensus Reaching Systems as a presheaf category
+\begin{lemma}
+The Category of Consensus Protocols is a Category of sheaves.
+\end{lemma}
+
+\begin{proof}
+Define the Category of Consensus Reaching Systems as a presheaf category
 \begin{equation}
 \mathcal{C}: \{Obj(\mathcal{C}): \{\Omega^T_\Gamma \} | \rightarrow:  \Omega^T \circ \Omega_\Gamma \}
 \end{equation}
+\end{proof}
 
 If follows by construction that arrows $\partial$ satisfy Axiom B via the compositions proofs of $ \Omega^T$ and $\Omega_\Gamma$ and our object $\Omega^T_\Gamma$ satisfied Axiom A by definition.
 
-Proof of presheaf condition: given two objects $P, Q \in$ $ \mathcal{C}$ the Poincare Protocol a morphism $\alpha: P \rightarrow Q$ between them is a natural transformation of functors such that 
+Given two objects $P, Q \in$ $ \mathcal{C}$ the Poincare Protocol a morphism $\alpha: P \rightarrow Q$ between them is a natural transformation of functors such that 
 % https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXG1hdGhjYWx7Q30iXSxbMiwwLCJIeXAgIl0sWzEsMCwiXFxkb3duYXJyb3cgXFxwYXJ0aWFsIl0sWzMsMCwiU2V0Il0sWzAsMSwiUSIsMix7ImN1cnZlIjo1fV0sWzAsMSwiUCIsMCx7ImN1cnZlIjotNX1dLFsxLDNdXQ==
 \[\begin{tikzcd}
 	{\mathcal{C}} & {\downarrow \partial} & {Hyp } & {Set}
@@ -249,16 +217,22 @@ Proof of presheaf condition: given two objects $P, Q \in$ $ \mathcal{C}$ the Poi
 	\arrow[from=1-3, to=1-4]
 \end{tikzcd}\]
 via the enrichment of geometric cw-complexes has strict ordering enforced by deRham cohomology of $\Omega^T_\Gamma$ objects, satisfying the presheaf condition due to the existence of forgetful functors into the category of hypergraphs for all deRham complexes. 
+\end{proof}
 
 \subsubsection{The Consensus Topos}
 The Poincare Protocol was defined in terms of a special topological object called a sheaf $\epsilon$ which is an object that encapsulates action within a space. 
 The idea is similar to how basis are managed in ordinary vector calculus but extended to abstract spaces.
-In differential geometry sites, (one element of the sheaf object), are "stitched together" to form a domain upon which differential forms leading to proper calculus can be conducted; as will be demonstrated later, this is core to the derivation of utility function.
-However the real reason for formulating in terms of sheaves is the ability to construct a topos, a special kind of category for "behavior types" whose elements or configuration state changes through time, as its objects.
+In differential geometry sites, (one element of the sheaf object), are "stitched together" to form a domain upon which differential forms, which lead to proper calculus, can be conducted; as will be demonstrated later, this is core to the derivation of the utility function.
+Formulating in terms of sheaves yields the ability to construct a topos, a special kind of category for "behavior types" whose objects are configuration state changes through time.
 This allows the verification of processes and even quantification of their safety, which is the goal of wider field of Complex Systems of Systems Theory\footnote{Spivek et. al., "Abstraction, Composition and Contracts:A Sheaf Theoretic Approachr", \\ https://arxiv.org/pdf/1802.03080.pdf}.
 Further research shows that applications of Blockchain technology and even the teminology (Contracts etc.) are in essence just extensions of logic proofs defined in terms of the intuitionistic logic of a topos.
-Let's construct the Topos of Poincare Protocols so it can be used as a context for the rest of the paper.
+Let's construct the topos of Poincare Protocols so it can be used as a context for the rest of the paper.
 
+\begin{theorem}
+A Category of Sheaves is a topos
+\end{theorem}
+
+\begin{proof}
 A Category of Sheaves is a topos, if the following conditions are met:
 
 $\bullet$ Axiom C) The sheaf condition of a presheaf $\epsilon$ is satisfied\footnote{Spivek et. al., Definition 7.35, "Abstraction, Composition and Contracts:A Sheaf Theoretic Approachr", \\ https://arxiv.org/pdf/1802.03080.pdf}, namely there exists a matching family of p-sections over a "covering" or collection of open sets contained within an object, such that for each section within the presheaf, the matching families are equivalent up to Homotopy. If there exists a unique gluing for every matching family we say that P satisfies the sheaf condition for the cover.
@@ -280,6 +254,7 @@ $\bullet$ Axiom D) There exists a "subobject classifier" $\Omega$ the object of 
 \end{equation}
 
 Proof of Axiom D: this is trivial, it is the presheaf of the linear subspaces of the sheaf cohomology of the de Rham complex used in defining $\epsilon$.
+\end{proof}
 
 We now have the Consensus Topos
 \begin{equation}
@@ -288,20 +263,27 @@ We now have the Consensus Topos
 which is a sheaf topos of Poincare Protocols.
 
 \subsection{A Day Construction of Generative Effects}
-The Consensus Topos is a powerful object in that it can be used to quantify the compatibility of consensus protocol and even calculate measures of safety in a Consensus Protocol. 
+The Consensus Topos is a powerful object in that it can be used to quantify the compatibility of consensus protocols and calculate measures of Consensus Protocol safety by extending the well known Calculus of Functors. 
 Calculus of Functors is a theory that aims to “approximate” functors in algebra and topology much like the Taylor polynomials approximate ordinary smooth real or complex-valued functions.
 Functors of the Consensus Topos are compatible with the calculus of functors, but in order to incorporate system guarantees, the enrichment of these functors is required for concrete metrics.
-Behavioral Types can be quantified and analyzed in terms of Generative Effects, namely by the Generative Calculus which is defined below, but first we must construct a context for the Generative calculus.
+This is where Generative Calculus comes in.
+Behavioral Types can be quantified and analyzed in terms of Generative Effects, namely by the Generative Calculus which is defined below.
 
 The Generative Calculus is largely an extension and in some ways simplification of the Abelian Functor Calculus, which is the calculus of functors of abelian categories.
 The construction of a directional derivative for abelian categories provides an abstract framework that makes certain analogies between classical and functor calculus explicit.
 This analogy as will be shown, is necessary to calculate metrics in the consensus topos using de rham cohomology (a measure of how well the fundamental theorem of calculus holds up) to quantify 'lossiness' similar to the theory of error correction codes.
 By further reducing the arrows of the category to a day convolution, Generative Calculus calculates safety in terms of manifold deformaions/energy loss or equivalently in the language of fourier transforms, decoherence.
-First, lets start from the definition of Abelian Functor Calculus and its associated directional derivative, within that context the Generative Calculus will be defined followed by proofs of properties specified.
+First, let's start from the definition of Abelian Functor Calculus and its associated directional derivative.
+Within that context the Generative Calculus will be defined followed by proofs of properties specified.
 
-In order to take advantage of the work of Bauer et. al. we need show that the ConTop is an appropriate abelian category.
-Fortunately, their construction relies on homotopy equivalence which has been previously shown for Poincare Protocols\footnote{b cohomology}. 
+In order to take advantage of the Abelian Functor Calculus of Bauer et. al. we need show that the ConTop is an appropriate abelian category.
+Fortunately, their construction relies on homotopy equivalence which has been previously shown for Poincare Protocols\footnote{Blockchain Cohomology}. 
+
+\begin{lemma}
 By identifying a comonad $C_n$ on the category of all functors between a fixed pair of abelian categories, and defining $P_nF$ directly as a resolution of $F$ by this comonad, a Taylor tower of abelian categories is derived.
+\end{lemma}
+
+\begin{proof}
 For an abelian category $\mathcal{A}$, let $Ch\mathcal{A}$ denote the category of chain complexes on $\mathcal{A}$.
 By means of totalization via the methods used by JM2\footnote{[JM2, Lemma 5.7] https://arxiv.org/pdf/1610.01930.pdf} the category of chain complexes can be considered a pseudomonad acting on the large 2-category of abelian categories, arbitrary functors between them and natural transformations.
 Consider the quotient monad $Ch(-)$ acting on the 1-category $AbCat$ of abelian categories and isomorphism classes of functors:
@@ -325,19 +307,27 @@ $\bullet$ Axiom D) If the components of the multiplication of the monad are the 
 \begin{equation}
 ChCH\mathcal{A} \xrightarrow{Tot} Ch\mathcal{A}
 \end{equation}
-that convert a "double complex" (chain complex of chain complexes, who's squares commute) in $\mathcal{A}$ into a chain complex in $\mathcal{A}$ by forming the "total complex"
+that convert a "double complex" (chain complex of chain complexes, who's squares commute) in $\mathcal{A}$ into a chain complex in $\mathcal{A}$ by forming the "total complex".
+
+\end{proof}
 
 An equivalent monad can be constructed from ConTop.
 
-Proof of equivalence of $Th$ and $Ch$: theProtocol Complex used to construct ConTop can be used to construct a monad Th(-) that has the following properties:
+\begin{theorem}
+The Protocol Complex used to construct ConTop can be used to construct a monad $Th(-)$ that is equivalent to $Ch$.
+\end{theorem}
 
-$\bullet$ Axiom A) by eq 11\footnote{b cohomology} ConTop's sheaf $\epsilon$ is defined as ’enrichment’ of any cochain A-complex of positive degree/grade,  corresponding  to the A-resolution  of  an  abstract A-module, a non-negatively graded chain complex in $\mathcal{A}$. Thus all functors and thus monads in a Consensus category share the same subobject classifier $\Omega$. Thus any monad in ConTop carries an abelian category given by the A-module into $\mathcal{A}$ to the category $Ch\mathcal{A}$ of non-negatively graded chain complexes in $\mathcal{A}$
+\begin{proof}
+The Protocol Complex used to construct ConTop can be used to construct a monad $Th(-)$ that has the following properties:
 
-$\bullet$ Axiom B) The Protocol Complex (eq 9\footnote{}), chain homotopy for successive functors $\sigma$ are homotopy preserving graded abelian group morphisms with vanishing homology, which by definition satisfy the coherence conditions required by the composite functor $Ch F$ in Axiom B
+$\bullet$ Axiom A) by eq 11\footnote{Blockchain Cohomology} ConTop's sheaf $\epsilon$ is defined as ’enrichment’ of any cochain A-complex of positive degree/grade,  corresponding  to the A-resolution  of  an  abstract A-module, a non-negatively graded chain complex in $\mathcal{A}$. Thus all functors and thus monads in a Consensus category share the same subobject classifier $\Omega$. Thus any monad in ConTop carries an abelian category given by the A-module into $\mathcal{A}$ to the category $Ch\mathcal{A}$ of non-negatively graded chain complexes in $\mathcal{A}$
 
-$\bullet$ Axiom C) This is again shown by chain homotopy of (eq 9\footnote{}) of the Protocol Complex
+$\bullet$ Axiom B) The Protocol Complex (eq 9), chain homotopy for successive functors $\sigma$ are homotopy preserving graded abelian group morphisms with vanishing homology, which by definition satisfy the coherence conditions required by the composite functor $Ch F$ in Axiom B
 
-$\bullet$ Axiom D) By definition of the Protocol Manifold (eq 16 \footnote{}) as the ringed vector space formed by the direct sum of the vector subspaces of protocol sheaves. This is equivalent to the definition of a cone of a chain complex of chain maps, which is the typical definition of totalization, a direct sum of a projective resolution of a chain map\footnote{eq 110 https://math.berkeley.edu/~qchu/Notes/253.pdf}.
+$\bullet$ Axiom C) This is again shown by chain homotopy of (eq 9) of the Protocol Complex
+
+$\bullet$ Axiom D) By definition of the Protocol Manifold (eq 16) as the ringed vector space formed by the direct sum of the vector subspaces of protocol sheaves. This is equivalent to the definition of a cone of a chain complex of chain maps, which is the typical definition of totalization, a direct sum of a projective resolution of a chain map\footnote{eq 110 https://math.berkeley.edu/~qchu/Notes/253.pdf}.
+\end{proof}
 
 Next, Brauer's syntax is borrowed such that "$F: B \rightsquigarrow A$" denotes a functor $F:B \rightarrow Ch\mathcal{A}$.
 For any category acted upon by a monad there is an associated Kleisli category, thus in terms of $Ch(-)$ on $AbCat$: the (large) Kleisli category $AbCat_Ch$, has the following properties:
@@ -358,7 +348,13 @@ such that the 1-category $AbCat$ defines a subcategory of $AbCat_Ch$ where a fun
 \mathcal{B} \xrightarrow{F} \mathcal{A} \xrightarrow{deg_0} Ch \mathcal{A}
 \end{equation}
 
-Proof of Equivalence between $AbCat_Ch$ and ConTop: Making use of the newly defined $Th(-)$
+\begin{lemma}
+Equivalence between $AbCat_Ch$ and ConTop
+\end{lemma}
+
+\begin{proof}
+Making use of the newly defined $Th(-)$:
+
 $\bullet$ By definition of $\mathcal{E} := Shv(\Omega^T_\Gamma, Op)$, $\mathcal{E}$ is abelian as its subobject classifier $\Omega^T_\Gamma$ are A-modules of a Z+-graded discrete differential form.
 
 $\bullet$ Axiom B) morphisms $\mathcal{B} \rightsquigarrow Ch \mathcal{A}$ are natural isomorphism classes of functors as defined by "$\rightsquigarrow$" and Axiom C of $Th$
@@ -366,6 +362,7 @@ $\bullet$ Axiom B) morphisms $\mathcal{B} \rightsquigarrow Ch \mathcal{A}$ are n
 $\bullet$ Axiom C) This follows from axiom C of Th
 
 $\bullet$ Axiom D) This follows from Axiom D of Th, specifically the composition of two functors carrying the protocol complex has the attribute of a manifold that is defined as the direct sum over protocol sheaves, which is an equivalent definition of totality as is required. (maybe need to show again using the dfn of $\rightsquigarrow$ but its trivial.
+\end{proof}
 
 The general form of the abelian functor calculus is encapsulated in the universal polynomial degree-n approximations to a functor $F: A \rightsquigarrow B$.
 The nth polynomial approximation $P_n F: A \rightsquigarrow B$ of a $F: A \rightsquigarrow B$ is the functor that carries $X \in B$ to the totalization of the chain complex of chain complexes in $A$:
@@ -447,7 +444,12 @@ Because $\nabla^k F$ vanishes if any of its directional variables is zero, the o
 This proves the congruence from the other direction.
 Finally, these constructions will be extended to generative effects in the Consensus Topos, forming the Generative Calculus.
 
-Definition, Generative Calculus: consider the Consensus Topos ConTop, an abelian category as shown above. 
+\begin{theorem}
+Define Generative Calculus as a functor calculus of decoherence/deformation can be defined as an extension of the abelian functor calculus.
+\end{theorem}
+
+\begin{proof}
+Consider the Consensus Topos ConTop, an abelian category as shown above. 
 A functor calculus of decoherence/deformation can be defined as an extension of the abelian functor calculus as follows.
 Take the chain homotopy equivalence
 \begin{equation}
@@ -508,6 +510,7 @@ Then on this object the general cohesive integration map (above) reduces on the 
 \begin{equation}
 \int_{\Delta^{1} \times X / X}: \Omega(\Delta^{1} \times X)^n_{cl} \rightarrow \Omega^{n-}(X)/im(\mathbf{d})
 \end{equation}
+\end{proof}
 
 This gives nice concrete bounds in terms of limits (and colimits) which will be used in the following section to extend Generative calculus the decoherence of a topos of behavioral types.
 
@@ -515,10 +518,10 @@ This gives nice concrete bounds in terms of limits (and colimits) which will be 
 The decoherence that $\prod^T_{\Gamma}$ represents is actually a deformation in the fundamental assumptions of the system. 
 Thus, as spaces and functions between them are introduced in the rest of the work, these formulations are realized "up to coherence" just as a category is well defined "up to homotopy". 
 As ConTop was created as a context for analyzing Consensus Protocols, as will be shown below, the logic of each consensus protocol can be used to create a manifold of desired behavior.
-For traditional consensus protocols, all information is self contained within the context of the protocol; external information does not affect the outcome of consensus
+For traditional consensus protocols, all information is self contained within the context of the protocol; external information does not affect the outcome of consensus.
 In these models its exception handling is essentially what will determine the coherence structure.
 In the ideal case, there exists a model that can be trained to identify latent structure via generative cross-effects of composed protocols in ConTop.
-This is the focus of a concurrent work, MEME\footnote{}.
+This is the focus of a concurrent work, (MEME).
 However, for the rest of the paper, the effect of optimizing for latent embedding will be limited to incorporation of deformation of the coherence complex into calculation of temporal logic.
 
 The coherence complex and its functional are representations of geometric deformation or distortion with respect to a deterministically expected distribution given by the protocol in ideal conditions.
@@ -531,7 +534,7 @@ B_\mathrm{Entropy} = \sum_{i\,\in\,\{1, \dots, r\}} \int \rho_i\, H_i\, \omega.
 where {$H_i(p) = - \tfrac{1}{\log_b(i)} \sum_j p_j \log_b(p_j)$} is the normalized Shannon entropy, where $p$ is a discrete probability measure of how the result of a node's actions deviate from the accepted state of the protocol and $b$ is our base. 
 The later is binary, as all data types can be decomposed into binary.
 Reduction in entropy can thus be seen as a measure of efficiency.
-Normalized entropy is advantageous as it scales with sample size and has shown effective at anomaly detection in networks
+Normalized entropy is advantageous as it scales with sample size and has shown effective at anomaly detection in networks.
 In proceeding sections, we will determine a norm/normalization function that allows for the proper metric calculation of coherence/decoherence as is common in the field of error correction codes.
 As will be shown, the norm will be defined in terms of the type hierarchy of the subobject classifier $\Omega$ and the successive exponentiation operators on sheaves within the hierarchy.
 
@@ -539,18 +542,24 @@ As will be shown, the norm will be defined in terms of the type hierarchy of the
 Let $f: X \rightarrow R^n$ define a vector field on some state space X.
 Then, roughly speaking, this system is structurally stable if small perturbations in the function f do not change the topological structure of the vector field $\dot{x}=f(x)$.
 We can then think of a perturbation of f as being a choice of any function in some e-ball around f.
-Topological equivalence in the context fo vector spaces is defined in terms of a theory of flows.
+Topological equivalence in the context of vector spaces is defined in terms of a theory of flows.
 Roughly speaking the flow of two dynamical systems on $D^n$ are topologically equivalent if there is a homeomorphism $h: D^n \rightarrow D^n$  that carries the orbits of one flow onto the orbits of the other.
 We can think of this homeomorphism as being some continuous change of co-ordinates, so that topological  equivalence of two flows just means that we can find a  continuous change of coordinates so that  one flow looks like the other. 
+
 Finally we define the concept of structural stability.
 A dynamical system $\dot{x} = f(x)$ on $D^n$ is structurally stable if there is some neighborhood off such that for every function g in that neighborhood, the flow induced by $\dot{x}=g(x)$ is topologically equivalent to the flow of $f$.
-Loosely speaking, a  dynamical system is structurally stable if small perturbations in the underlying function f   do not change the qualitative nature of the  flow.
+Loosely speaking, a dynamical system is structurally stable if small perturbations in the underlying function f do not change the qualitative nature of the  flow.
 
 By using the cw-complex of ConTop, we can show that Cells are subject to morse-smale gradient-like flows\footnote{https://arxiv.org/pdf/2003.07134.pdf} and the pertubation equations are defined in terms of stable foliation.
 We will thus define the steady state criteria for ConTop by showing it is a valid morse-smale evolution process, or rather in terms of the nonautonomous pertubations of autonomous ODEs\footnote{https://www.researchgate.net/publication/316259096 morse smale evolution processes}.
 Fixed point theorems are useful for establishing the existence of solutions to a  system of nonlinear equations and we will take the fixpoints of the GAS lawvere theory to define these ODEs.
 
-According to THEOREM 4.1\footnote{https://core.ac.uk/download/pdf/82133247.pdf} any sub-complex in the cw complex of the poincare protocol has a morse-smale vector field gradient-like with respect to a new morse function, thus it follows for all cells in ConTop.
+\begin{theorem}
+ConTop admits $\alpha$-Morse-Smale flow, carrying a cohomology class $[\alpha]$ on X, a compact polyhedron with a metric $d$.
+\end{theorem}
+
+\begin{proof}
+According to theorem 4.1\footnote{https://core.ac.uk/download/pdf/82133247.pdf} any sub-complex in the cw complex of the poincare protocol has a morse-smale vector field gradient-like with respect to a new morse function, thus it follows for all cells in ConTop.
 The cell-homotopy equivalence of the poincare protocol complex gives the inequality required by theorem 4.4 to define a Morse-Smale flow on M whose associated CW complex is  ceil equivalent to Y.
 Note also that the reRham complex that forms the protocol manifold define hyperbolic spaces and the global evolution "tetrad" which is compatible with a global  evolution  process\footnote{https://www.researchgate.net/publication/316259096  morse smale evolution processes}. 
 The semiflow given by eq 13 in Proposition 1 is equivalent to the temporal logic of behavior types $\Theta$ above.
@@ -574,6 +583,13 @@ for some $d^{*} > \hat{d}$ there exists a non-vanishing solution $U_{+ \infty}(t
 \end{equation}
 
 Moreover by Theorem 4.6.6\footnote{https://arxiv.org/pdf/math/0010295.pdf} and the definition of the of the morse relation for protocol homotopy, ConTop admits $\alpha$-Morse-Smale flow, which is a flow carrying a cohomology class $[\alpha]$ on X, a compact polyhedron witha metric $d$.
+\end{proof}
+
+\begin{theorem}
+The structural stability of the global attractor (A-stability) of $H_k(M, \Omega)$ can be described in terms of the path integral functional of the Type Tower.
+\end{theorem}
+
+\begin{proof}
 For the case of linearized operators, such as Dirichlet forms or autonomous systems enerating a $C_0$-semigroup of bounded linear operators in X and let $g \in C^1(Y,X)$.  
 We consider either the finite dimensional case Y=X=R nor, in infinite dimensions,  the case of L sectorial and $Y= X^ \alpha$,  the fractional power space of L with appropriate $\alpha \in (0,1)$.  
 We denote by $C e (R,C^1(Y,X))$ the metric space of continuous functions $f=f(t,z)$ uniformly Lipschitz continuous for $t\in \mathbb{R}$ and differentiable in z with uniform e-bounded $C^1$-norm.
@@ -595,10 +611,14 @@ U(t) = T(t + \omega, t)
 \end{equation}
 We also let $M{nh}_f$ denote the set of all normally hyperbolic isolated invariant manifolds $M^T_f$ satisfying the following:
 1) $M^T_f$  are fibered by graphs of partially hyperbolic solutions ofSf(·,·) possessing exponential trichotomy with two dimensional center manifold
-2) or each $t\in R$ the natural B-projection of the t-section of $M^T_f$(which is in $A_f(t)$) is homeomorphic to a circle
+2) or each $t\in R$ the natural B-projection of the t-section of $M^T_f$(which is in $A_f(t)$) is homeomorphic to a circle.
+
 For each tube $M^T_f$ there exists two manifolds:
+
 1) the unstable manifold $W^u(M^T_f)$
+
 2) the local stable manifold $W^s_{loc}(M^T_f)$
+
 The Cell Complex of the Poincare Protocol is a Simple Foliation\footnote{https://ncatlab.org/nlab/show/simple+foliation} which is equivalently defined in terms of the chain homotopy and trivially equivalent to the Fredholm complex\footnote{https://ncatlab.org/nlab/show/Fredholm+operator} via the Laplacian.
 Thus, the convergence for the strong unstable manifold is
 \begin{equation}
@@ -615,6 +635,13 @@ Thus, the structural stability of the global attractor (A-stability) of $H_k(M, 
 \int \langle \zeta | \tau \rangle = \sum_{i\,\in\,\{1, \dots, r\}} \int \rho_i\, H_i\, \omega = \lVert G(t) \rVert_{L(Y^\alpha, Y)} \leq C e^{-C |n|}
 \end{equation}
 where $X = Y^\alpha$ is a fractional space and equivalent to the Type Tower defined for the directional derivative.
+\end{proof}
+
+\begin{theorem}
+$H_k(M, \Omega)$ admits a vector space representation of stability in terms of an Escape function of anisotropic Sobelov Spaces
+\end{theorem}
+
+\begin{proof}
 If $\alpha = 0$ it suffices to assume that A is the generator of a $C_0$-semigroup.
 Note that 
 \begin{equation}
@@ -638,29 +665,35 @@ A = \sum_j \lambda_j \ket{j} \bra{j}
 \end{equation}
 where the spectral space of A is given by the outer or wedge product given by $\ket{j} \bra{j}$ and its eigenvalues of the eigenvectors of define the steady state criteria in terms of Lyapunov exponents\footnote{def 1.2 https://core.ac.uk/download/pdf/82133247.pdf}.
 Now if we choose a proper Riemann metric, namely the Fisher information metric, we see the other side of the path integral formulation, namely information gain in terms of Gibbs free energy.
-The action of a curve on a riemannian manifold is understood to give the change in free entropy of a system as it moves from time a to time b\footnote{https://arxiv.org/pdf/0706.0559.pdf}.
+The action of a curve on a Riemannian manifold is understood to give the change in free entropy of a system as it moves from time a to time b\footnote{https://arxiv.org/pdf/0706.0559.pdf}.
 We finally arrive at the vector space representation of stability in terms of an Escape function of anisotropic Sobelov Spaces.
 
-Four our hilbert space construction of A, introduce an anisotropic Sobolev space of currents and define a fullasymptotic for the correlation function.
+For our Hilbert space construction of A, introduce an anisotropic Sobolev space of currents and define a full asymptotic for the correlation function.
 By Prop 7.8\footnote{http://math.univ-lyon1.fr/homes-www/dang/Dang-Riviere-gradient-flow-2018.pdf} the 'duality map' of $\rho^{-t*}_f$ is the external wedge product of A.
 Using the conventions of [22], one can define the Fourier transform as follows
 \begin{equation}
-\prod det(\prod^(k)_{\Lambda}(\mathcal{L}^{(k)}_{V_f} + z)\prod^(k)_{\Lambda})^{(-1)^k} = z^{\chi^{(M)}}
+\prod det(\prod^{k}_{\Lambda}(\mathcal{L}^{(k)}_{V_f} + z)\prod^{k}_{\Lambda})^{(-1)^k} = z^{\chi^{(M)}}
 \end{equation}
 which show the connextion to current near a critical point and the duality map is locally near a equal to F up to some normalizing constant depending on n and k.
 Let $\rho^{t*}_f$ be a Morse-Smale gradient flow all of whose Lyapunov exponents are rationally independent.  
 Then, one has, for every $\Lambda > 0$ and for every z in $\mathbb{C}^*$
 \begin{equation}
-\prod det(\prod^(k)_{\Lambda}(\mathcal{L}^{(k)}_{V_f} + z)\prod^(k)_{\Lambda})^{(-1)^k} = z^{\chi^{(M)}}
+\prod det(\prod^{(k)}_{\Lambda}(\mathcal{L}^{(k)}_{V_f} + z)\prod^{(k)}_{\Lambda})^{(-1)^k} = z^{\chi^{(M)}}
 \end{equation}
-where $\prod^(k)_{\Lambda}$ is the spectral projector and det is the standard determinant.
+where $\prod^{(k)}_{\Lambda}$ is the spectral projector and det is the standard determinant.
+\end{proof}
 
-\subsection{Cell Complex of Triangulated Generative Effects}
-The Generative calculus can be reformulated in terms of the Day convolution, which greatly simplifies the correspondence between Behavioral Types and calculus of functors by reducing the mechanics to the tensor product of monoids.
-For those who like the analogy between functors and containers, Day convolution may be understood as containing a box of xs and a bag of ys, plus a binary combinator for turning every possible pair (x, y) into an a\footnote{https://bartoszmilewski.com/2018/02/17/free-monoidal-functors/}.
-Another fundamental motivation is that the categorical equivalent of the Day convolution is the of fourier transform\footnote{baez blog} as the fourier transform of distributions interchanges convolution of distributions with pointwise product\footnote{https://ncatlab.org/nlab/show/convolution+product+of+distributions}, which is how this will ultimately be applied, in reformulating the mathematical theory of arbitrage.
-Without ado, lets form a convolutional construction of the Generative calculus which will be used throughout the rest of the paper.
+\subsubsection{The Cell Complex of Triangulated Generative Effects}
+The Generative Calculus can be reformulated in terms of the Day convolution, which greatly simplifies the correspondence between Behavioral Types and calculus of functors by reducing the mechanics to the tensor product of monoids.
+For those who like the analogy between functors and containers, Day convolution may be understood as containing a box of $x$s and a bag of $y$s, plus a binary combinator for turning every possible pair (x, y) into an a\footnote{https://bartoszmilewski.com/2018/02/17/free-monoidal-functors/}.
+Another fundamental motivation is that the categorical equivalent of the Fourier transform is the Day convolution\footnote{baez blog}.
+The fourier transform of distributions interchanges convolution of distributions with pointwise product\footnote{https://ncatlab.org/nlab/show/convolution+product+of+distributions}, which is how this is ultimately be applied in reformulating the Mathematical Theory of Arbitrage.
 
+\begin{theorem}
+There exists a convolutional construction of the Generative calculus.
+\end{theorem}
+
+\begin{proof}
 Every topos $\mathcal{H}$ is canonically a cartesian monoidal category $(\mathcal{H}, \times)$, with the tensor product being the cartesian product. 
 If in addition to this canonical product $\mathcal{H}$ is equipped with another noncartesian monoidal category structure $\otimes$, then $(\mathcal{H}, \otimes)$ might be called a monoidal topos. 
 Such monoidal toposes appear as categories of local action functionals in the context of motivic quantization.
@@ -672,6 +705,7 @@ Thus for ConTop acquires the following day convolution tensor product of graded 
 \end{equation}
 where $X, Y \in \mathcal{E}$.
 Further note that a pullback of functions along this map makes an involution of the convolution algebra of $\mathcal{E}$ or equivalently that it is a star category\footnote{https://ncatlab.org/nlab/show/category+algebra}
+\end{proof}
 
 To provide semantics for a logical system means to provide a compiler that converts each logical statement in the formal language into a mathematical statement about particular sheaves and their relationships. A computer can carry out logical deductions without knowing what any of them “mean” about sheaves. 
 We say that semantics is sound if every formal proof is converted into a true fact about the relevant sheaves.
@@ -679,12 +713,17 @@ Every topos can be assigned a formal language, often called its internal languag
 This language has a sound semantics—a sort of logic-to-sheaf compiler—which goes under the name categorical semantics or Kripke-Joyal semantics
 (see 7.4.6 in 7 sketches)
 
-ConTop is a special topos in that it is constructed synthetically such that its dual cohomology directly maps logic of the s $\Omega$ to the spaces of differential forms.
+ConTop is a special topos in that it is constructed synthetically such that its dual cohomology directly maps logic of the $\Omega$ to the spaces of differential forms.
 This means that the logic of behavior types can directly incorporate geometric representation of decoherence into conserved metrics.
 ConTop can thus be reformulated in terms of Behavior types using the Day Convolution Construction, resulting in a computable cellular lattice.
 A property further explored in this reformulation is the ability for the subobject classifier $\Omega$ to define categorical semantics, which recursively assign interpretations to its types and terms.
 It will be shown that behavioral effects are decidable relative to a global behavior that is given by the interval domain.
 
+\begin{theorem}
+ConTop is a computable cellular lattice of behavior types.
+\end{theorem}
+
+\begin{proof}
 Spivak et. al. define the translation invariant topos $\mathcal{B}$ of behavior types as 
 \begin{equation}
 \mathcal{B} := Shv(\mathcal{S}_{\mathbb{IR / \triangleright}})
@@ -699,7 +738,9 @@ By corrollary 3.15\footnote{https://arxiv.org/pdf/1806.08304.pdf} gens is the ri
 For any Hypergraph $\mathcal{H}$ and $Cospan_\lambda$, the free hypergraph category on an arbitrary set $\Lambda$, there is a cospan-algebra $\mathcal{A_H}$ such that if $\mathcal{H}$ is an objectwise-free category, there exists a lax monoidal functor $L: Cospan_{\Lambda} \rightarrow Set$ which can map to the category of sets\footnote{lemma 4.8 https://arxiv.org/pdf/1806.08304.pdf}.
 The derived category for $\mathcal{E}$ is continuous by definition of the coherence criteria, meaning that the existence of $L$ is proof of theorem 2.27 by item 4\footnote{https://arxiv.org/pdf/1710.10258.pdf}, which implies that $\mathcal{E} \cong \mathcal{B}$.
 Thus, internal semantics of $\mathcal{E}$ can be used to describe behavior types.
+\end{proof}
 
+\subsection{The Interval Domain and ConTop}
 A topos of behavioral effects can be described in terms of a space called the interval domain.
 The interval domain $\mathbb{IR}$ is a topological space used to model intervals of time.
 A category-theoretic description of behavior types is as follows: for every time window, of length $l$ , a behavior type $\mathbb{B}$ is responsible for providing a set $\mathbb{B}(l)$ of all behaviors, called "length-$l$ sections" of $\mathbb{B}$, that can possibly occur over this time window.
@@ -732,7 +773,14 @@ We prefer to think of it as a proposition in context $\Gamma = (s_1:S_1, \dots s
 A labeled transition system can be interpreted in the temporal type theory within the framework of hybrid sheaf formalism.
 We want to interpret a labeled transition system as a machine or processes within machines, in the sense of section 4.1. 
 In order to construct a behavior type for the ports $I$ and $O$, as well as the total behavior type of the machine, we must decide on what that behavior will be.
-In other words, we need to choose a way to incorporate the components of Definition8.17into a temporal story of the type of behavior it can exhibit. 
+In other words, we need to choose a way to incorporate the components of Definition 8.17 into a temporal story of the type of behavior it can exhibit. 
+This will be used to prove the following theorem.
+
+\begin{theorem}
+ConTop $\cong$ GraphCospan $\implies$ ConTop is decidable.
+\end{theorem}
+
+\begin{proof}
 Consider the following story describing the dynamics of the Poincare protocol:
 
 Signals—in the form of Fibers—are appearing on the port(s) $I$ of a Cell process. 
@@ -822,7 +870,8 @@ which is computed as the left kan extension for $X, Y \in \mathcal{E}$
 \begin{equation}
 Cell(\Omega, \otimes^T_\Gamma) = X \otimes_{Day}Y \cong Lan_{\otimes_{\mathcal{E}}}(X \wedge Y)
 \end{equation}
-This is tensoral construction is equivalent to the coherence complex and carries the external product laws of de Rham cohomology, as it follows easily from Definition 2.2\footnote{https://arxiv.org/pdf/1801.03467.pdf} that the Day convolution commutes with colimits in each variable.
+
+This tensoral construction is equivalent to the coherence complex and carries the external product laws of de Rham cohomology, as it follows easily from Definition 2.2\footnote{https://arxiv.org/pdf/1801.03467.pdf} that the Day convolution commutes with colimits in each variable.
 So we can take the homotopy colimit as $L \rightarrow \infty$ yielding 
 \begin{equation}
 \Delta_n(-)(x_1, \dots , x_n) \cong \Delta_1(-)(x_1) \otimes \dots \otimes \Delta_1(-)(x_n)
@@ -877,7 +926,8 @@ Finally, we can show that Cell inhabits the interface with the Convergence Props
 	\arrow[from=1-1, to=1-3]
 	\arrow[from=1-3, to=1-5]
 \end{tikzcd}\]
-Finally, Cell coherence is calculated using the definition of GraphCospan but with monoid addition and will be extended in the next section to define safety proofs for $\mathcal{E}$.
+Finally, Cell coherence is calculated using the definition of GraphCospan but with monoid addition and will be extended to define safety proofs for $\mathcal{E}$.
+\end{proof}
 
 \subsubsection{Spiders of Triangulated Hypergraph Categories}
 Hypergraph categories are self-dual compact closed categories, if we define the cup and cap to be
@@ -921,7 +971,11 @@ Thus we can connect the cup and cap to the following spider diagram
 which show the relationship between the cocone of the system diagram in terms of a symmetry map $\omega: X^{\otimes2} \rightarrow X^{\otimes2}$\footnote{thm 6.55, 7 sketches} using composition and the monoidal product, and such that the string diagram of a map $f: X^{\otimes M} \rightarrow X^{\otimes N}$ has only one connected component and is a spider $f = s_{m,n}$.
 
 \subsection{The Path Integral Formulation}
-A closed form solution for open systems desceibed by the Cell complex can be defined by a path integral or in terms of the path of least action for forming protocol complex.
+\begin{theorem}
+A closed form solution for open systems described by the Cell complex can be defined by a path integral or in terms of the path of least action for forming protocol complex.
+\end{theorem}
+
+\begin{proof}
 The ‘twisted symplectification’ $S^t$, an application of the functor S followed by the isomorphism $\overset{-}{id_X}$ of a standard symplectic space with its conjugate., gives the following relation\footnote{theorem 6.51https://math.ucr.edu/home/baez/}
 \begin{equation}
 S^{op}_\mathcal{l}(Graph(dP)) = Graph(dQ)
@@ -932,8 +986,9 @@ The open system description for ConTop can described by the following cohomology
 H_n(x_1 \dots X_n; P_N) = U(x_1 \dots X_n; P_N) - G(x_1 \dots X_n; P_N)
 \end{equation}
 which can be understood as the sum over all paths, the sum over informational histories; the classical, discrete and informational version of the path integrals in statistical physics.
+
 We call the first-dimension mutual-information component U(X1,…,Xn;PN) the self-information or internal energy, in analogy to usual statistical physics and notably Discrete Fourier Transform
-Clearly $H_n$ has the same structure as the coherence complex $\prod^T_\Gamma$ and thus the ideal system potential $U$ corresponds to the laplacian and $G$ correwsponds top the directional derivative formulation which carries the actual state of the system.
+Clearly $H_n$ has the same structure as the coherence complex $\prod^T_\Gamma$ and thus the ideal system potential $U$ corresponds to the laplacian and $G$ corresponds to the directional derivative formulation which carries the actual state of the system.
 Free-information-energy integrates over the simplicial structure of the whole lattice of partitions over degrees $k\geq2$ (which is guaranteed for the simplest $\Omega$, namely $L_0, L1$).
 Thus, we arrive at the path integral formulation of the Coherence Complex's Cellular lattice by re-defining as a Complex System\footnote{def 9} as follows.
 Define the set of all maximal positive information paths that forms a simplicial complex $X^{+d}$, the minimum free energy complex.
@@ -960,20 +1015,22 @@ U(x_1 \dots X_n; P_N)  - \sum_{t(e)=n} I(e)) + (\sum_{t(e)=n} I(e) -G(x_1 \dots 
 \sum_{i\,\in\,\{1, \dots, r\}} \int \rho_i\, H_i\, \omega
 \end{equation}
 where {$H_i(p) = - \tfrac{1}{\log_b(i)} \sum_j p_j \log_b(p_j)$} is the normalized Shannon entropy.
-This will be used to develop the steady states equilibria.
+\end{proof}
+
+This will be used to develop steady state equilibria.
 
 \subsubsection{General Stability of $C^*$ Hilbert Bundle via Diffusion Map}
-Hypergraph categories have comult and counit making the markov categories https://arxiv.org/pdf/1908.07021.pdf
+Hypergraph categories have comult and counit making the markov categories \footnote{https://arxiv.org/pdf/1908.07021.pdf}
 We also know that due to the use of Fisher information metric, it is Basis Markov\footnote{20, https://webspace.clarkson.edu/~ebollt/Papers/stochas17.pdf} and separable along the dimension of its enrichment $\nu$, the dimension of the path integral formulation of the cohomology complex.
 This gives added flexibility to "mix" the probability spaces of different state channels in ConTop while still ensuring "separability" which allows for Markov the shift operator above in the symbolic dynamic formulation to be described as a discrete Markov matrix.
-While markov transition matrices are only weakly mixing for non-pure or perfectly separable states, if there is strong mixing such as $\nu$ admits, then it implies the system is ercodic\footnote{Proposition 1.2 http://www.weizmann.ac.il/math/sarigo/sites/math.sarigo/files/uploads/ergodicnotes.pdf}.
+While Markov transition matrices are only weakly mixing for non-pure or perfectly separable states, if there is strong mixing such as $\nu$ admits, then it implies the system is ergodic\footnote{Proposition 1.2 http://www.weizmann.ac.il/math/sarigo/sites/math.sarigo/files/uploads/ergodicnotes.pdf}.
 
-We can define a notion of Ergodicity for ConTop in terms of the difficulty of forging the cryptographic hashes of fibers/bundles
-\begin{equation}
-TODO: show bounds of Freedholm and Cell Complex
-\end{equation}
+\begin{theorem}
+ConTop is ergodic and the transition matrices are calculated using Markov Hilbert Diffusion.
+\end{theorem}
 
-We can use Markov Hilbert Diffusion\footnote{https://arxiv.org/ftp/cs/papers/0702/0702121.pdf} to define transition matrices for the Cell Complex formulation of ConTop.
+\begin{proof}
+We can define a notion of Ergodicity for ConTop in terms of the difficulty of forging the cryptographic hashes of fibers/bundles using Markov Hilbert Diffusion\footnote{https://arxiv.org/ftp/cs/papers/0702/0702121.pdf} to define transition matrices for the Cell Complex formulation of ConTop.
 A general time-dependent sample state in $\Omega$ can be decomposed as 
 \begin{equation}
 | \Omega^{(t)} ) = \mathbb{I} \ket{\Omega^{(t)} } = \sum^r_i \ket{i} \bra{i} \ket{\Omega^{(t)} } = \sum m^(t)(i) \ket{i_i} = 
@@ -996,25 +1053,29 @@ The Type Tower gives the diffusion map which can be expressed as
 and the diffusion distance 
 \begin{equation}
 D^2_t (x, z) = \sum^{n-1}_{j=1} \lambda^{2t}_j(\Psi_j(x) - \Psi_j(z))^2) = \lVert \Psi_t (x) \Psi_t (z) \rVert^2
-nd{pmatrix}
 \end{equation}
+\end{proof}
 
 \subsubsection{A Note on Information Gain and Coherence}
 By lemma 1, the set of entropy paths have a one-to-one correspondence with the set of stochastic processes: this is the focus of concurrent work MEME.
 Complexes of random variables and minimum free energy complex can be understood as providing a geometrically constrained architecture to deep neural networks, where the depth of the neural network corresponds to the dimension of the cochain complex and marginal variables and information I1 correspond to the input layer.
-Moreover, the energy functional interpretation of mutual information Ik and of total correlation Gk functions directly follow and generalize the definitions of the hierarchical deep architectures of Boltzmann machines and of Helmholtz machines [65,66] that explicitly expressed free energy in terms of Kullback-Leibler (KL) divergences between layers
-Notably, the introduction of the multiplicity decomposition of “energy functions” formalizes unsupervised learning in neural networks in terms of a combinatorial family of analytically independent functions Ik with independent gradients (Theorem 4 in Reference [2]): instead of a single energy and associated gradient descent, mutual information provides a multiplicity of gradients
+Moreover, the energy functional interpretation of mutual information Ik and of total correlation Gk functions directly follow and generalize the definitions of the hierarchical deep architectures of Boltzmann machines and of Helmholtz machines [65,66] that explicitly expressed free energy in terms of Kullback-Leibler (KL) divergences between layers.
+Notably, the introduction of the multiplicity decomposition of “energy functions” formalizes unsupervised learning in neural networks in terms of a combinatorial family of analytically independent functions Ik with independent gradients (Theorem 4 in Reference [2]): instead of a single energy and associated gradient descent, mutual information provides a multiplicity of gradients.
 Then, the maximal depth of a deep neural network achieving the classification given the data is the dimension of the information simplicial complex—a result that can be linked to the work of Montúfar on the dimension of restricted Boltzmann machine [175]. 
 In this cohomological context, the back-propagation is implemented by the information chain rule and is forward as imposed the cohomology contra-variant nature.
 The relation to information geometry and Amari’s natural gradient [176] follows from the relation of the Fisher information with the Hessian of the KL divergence [177] (or entropy [178]) and from the implementation of natural gradients for deep network training.
 
-However, rather than using entropy, we could use the Type Tower to construct colored operads which can encorporate markov data to show the limit above in terms of latent variables.
-Formulation of the minimum energy complex in terms of colored (typed) operads is exlored in MEME for the purposes of imroving coherence via machine learning of these latent variables
-
+However, rather than using entropy, we could use the Type Tower to construct colored operads which can incorporate markov data to show the limit above in terms of latent variables.
+Formulation of the minimum energy complex in terms of colored (typed) operads is explored in MEME for the purposes of improving coherence via machine learning of these latent variables.
 
 \subsection{Safety proofs with Generative Calculus}
 The enrichment on sheaves in ConTop gives a theory of quantales that is compatible with the tempral logic of concurrent hypergraphs; meaning that quantels can construct a coherence complex that is relative to each cell and can be used in logic proofs.
-The goal is to show that the deformation complex can be used within with eq7.6\footnote{https://arxiv.org/pdf/1710.10258.pdf} to reformulate the derivative in Definition 7.31 to formulate safety proofs that incorporate decoherence as a measure of latent variables.
+
+\begin{theorem}
+The deformation complex can be used within with eq7.6\footnote{https://arxiv.org/pdf/1710.10258.pdf} to reformulate the derivative in Definition 7.31 to formulate safety proofs that incorporate decoherence as a measure of latent variables.
+\end{theorem}
+
+\begin{proof}
 Consider the $j$-numeric derivative $\dot x: \mathcal{R}^{\infty}_\pi$ as the join of the directed family $\{ y: \mathcal{R}^{\infty}_\pi | AD(y, x) \}$ who's cuts $\dot x = (\dot \delta, \dot v)$ are given by eq 7.6.
 It will now be shown that the tempral logic of concurrent hypergraphs defines a compatible join for this derivative, implying that the coherence coplex can be incorporated into safety calculation and the internal language of our topos as will be expressed in the following section.
 
@@ -1058,10 +1119,17 @@ It follows that for any $t:Time$ and $r: \mathcal{R}$ we have the following
 q < a^@(r) \implies r < t \implies q < a \quad a^@(r) < q \implies t < r \implies a < q
 \end{equation}
 because deformation in the coherence complex is only possible in the case of a forgery $\aleph$ within the time bounds.
+\end{proof}
 
 \subsubsection{Convergence proofs for ConTop}
 The preceding safety proof was used to determine the safety of ConTop in terms of the time to forge hashes $\aleph$.
 However, another proof of convergence in the face of network delays of sybil attacks can be introduced.
+
+\begin{theorem}
+ConTop complexes converge independent of sybil attacks.
+\end{theorem}
+
+\begin{proof}
 Given a mapping $\rho_i: \Gamma_i \rightarrow \Gamma$ and image $\rho': \Gamma' \rightarrow \Gamma$ convergence can be proved by adding an axiom to the contract to calculate deformations in the coherence complex caused by latent variables, the set of types in $\Gamma$ but not in the image of $\rho'$.
 Conversely, types in the image of $\rho'$ are called exposed variables. 
 Lets define a new $\Theta = \theta_{safe}, \theta_{converge}, \theta_{intertial}$ for the contract, with $\theta_converge$ defined in terms of determinacy as follows
@@ -1098,6 +1166,7 @@ where as $a \rightarrow 0$ we now have
 @_N(safe < a \vee a < safe)
 \end{equation}
 which implies that $a \vee a \rightarrow 0$
+\end{proof}
 
 \subsection{Babel: A Language Syntax for Distributed Interpreters}
 The Generative Calculus can be used to define an interpreter for categorical semantics i.e. a programming language for declaration and verification of Consenus Protocols\footnote{danghica.blogspot.com/2019/05/how-to-make-programming-language-out-of.html}.
@@ -1109,6 +1178,11 @@ For this interpreter a specification language, Babel, can be constructed.
 Another goal of this interpreter is to allow REPL like syntax and live interaction with external Cells.
 A full syntax implementation is left for future work, but compatibility of $\Omega$ with CSL sentences is shown below.
 
+\begin{theorem}
+The temporal logic and modalities of the cellular decomposition are compatible with Categorical Specification Language and the internal language of Cell is compatible with CDT.
+\end{theorem}
+
+\begin{proof}
 A CSL structure is a pair of a category and an interpretation $\langle C, \zeta \rangle$, where $C$ is the free category of initial CSL structure.
 Given a CSL signature
 \begin{equation}
@@ -1151,7 +1225,7 @@ Definition Type Tree: let,
 which is an equivalent cellular construction of the directional derivative functional of Generative calculus (eq 18).
 By this equivalence, Axiom A is satisfied by the direct sum definition of n'th iterated partial derivative (18), Axiom B is equivalent to the definition of ConTops presheaf and Axiom C follows from the chain homotopy equivalence relating the nth higher directional derivative and the nth iterated partial di- rectional derivative (eq 19)
 
-Definition Cellular CSL Signature: let
+Define Cellular CSL Signature as:
 \begin{equation}
 \langle Cell(\omega, -), \zeta \rangle
 \end{equation}
@@ -1160,27 +1234,44 @@ As the morphism for $Hom_C (K, L)$ is clearly satisfied by the exact left adjoin
 Consider that by the definition of $\zeta_1$ (eq 40), $\Theta$ carried by the lax braided monoidal functor this satisfies the definition of j-closed proposition\footnote{definition 4.8, https://arxiv.org/pdf/1710.10258.pdf}.
 Any j-closed proposition can be rewritten separate of $j$ variables, which for $Cell$ are given by the quotient of the equivalence relation that is the Protocol Topology's homotopy equivalence relation and also the definition of dependent type\footnote{}.
 Thus $Cell(\Omega, -)$ is free along the j-closed propositions of $\Omega$, which satisfies the "ground" requirements up to homotopy and along the enrichment $\nu$.
+\end{proof}
 
 The interpreter $\zeta$ differs from local interpreters in that the global context is dynamic and defined in terms of the locally and globally observed behavior data.
 Thus it can be seen as a distributed interpreter for micro services.
 Unlike ordinary programming languages, which can't process the complex numbers directly\footnote{https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/}, Cells have homotopy defined by the protocol complex which allows for bijective correspondence of the internal temporal language and the coherence complex.
 
 \section{Generative Economics}
-The focus of the remaining work is a reformulation of general equilibrium theory in economics constructed within the generative calculus.
-Ellerman\footnote{https://ellerman.org/wp-content/uploads/2012/12/SIAM-Arbitrage-reprint.pdf} reformulated the mathematical theory of arbitrage in terms of physical systems and natural law.
-As will be shown, his construction of arbitrage free market prices can be reached from the dimensions defined in the contract $\Theta: ConTop$ and extended 
+The focus of the remaining work is a reformulation of general equilibrium theory in economics constructed via Generative Calculus.
+Ellerman\footnote{https://ellerman.org/wp-content/uploads/2012/12/SIAM-Arbitrage-reprint.pdf} famously reformulated the mathematical theory of arbitrage in terms of physical systems and natural law.
+As will be shown, his construction of arbitrage free market prices can be reached from the dimensions defined in the contract $\Theta: ConTop$.
 
 \subsection{The Economic Engine}
-Ellerman's paper breaks down a general theory of arbitrage from the lens of the type of calculus (technically differential geometry) which is used in the formulation of physical systems, the best example imho being the explanation of a "position" as a path across order books which is essentially kirkov's law. For a little tl;dr on arbitrage, as a quantity, it's assumed to be nonexistent (conserved) if exchange rates are dependent only on a price system. However in the real world, issues with centralized exchanges usually encapsulate some process of arbitrage, due to the disconnection between orderbooks (and whatever exchanges are doing themselves behind the scenes). Arbitrage described in terms of Kirkov's law has a fundamental assumption of being "path conserved" along any loop/cycle in a graph of transitions. Ellerman then describes a "derived boot system" in terms of the classical theories of flows on graphs (where by "boot" it means to swap one commodity for another based on a vector of exchange rates associated to each commodity) and extends via the fact that circulations (like kirkov) and boot systems form orthogonal subspaces to show the same for prices and exchanges. So essentially a price system and an exchange are orthogonal to each other, meaning they form a dual (like in that formula I derived above) however where the exchange is in terms of some external currency vs the price system. The takeaway is that there is an equivalence between the magnitude of the of the "cofactor vector" (essentially the diag of the dual which is a covariance matrix) is equal to zero means that arbitrage does not occur.
+Ellerman's paper breaks down a general theory of arbitrage from the lens of the type of calculus (technically differential geometry) which is used in the formulation of physical systems, the best example being the explanation "position" as a path across order books which is essentially kirkov's law. 
+For arbitrage as a quantity, it's assumed to be nonexistent (conserved) if exchange rates are dependent only on a price system. 
+However in the real world, issues with centralized exchanges usually encapsulate some process of arbitrage, due to the disconnection between orderbooks and whatever exchanges are doing themselves behind the scenes. 
+Arbitrage described in terms of Kirkov's law has a fundamental assumption of being "path conserved" along any loop/cycle in a graph of transitions.
+Ellerman then describes a "derived boot system" in terms of the classical theories of flows on graphs (where by "boot" it means to swap one commodity for another based on a vector of exchange rates associated to each commodity) and extends via the fact that circulations (like Kirkov) and boot systems form orthogonal subspaces to show the same for prices and exchanges.
+So essentially a price system and an exchange are orthogonal to each other, meaning they form a dual (such as in Markov Hilbert Diffusion) however where the exchange is in terms of some external currency vs the price system.
+The takeaway is that there is an equivalence between the magnitude of the of the "cofactor vector" (the diag of the dual which is a covariance matrix) and arbitrage such that if it is equal to zero means that arbitrage does not occur.
 
-Well what's really cool is that we can actually allow for arbitrage across commodities that allow for arbitrage to occur across each commodity's "boot vector" yet still preserving the requirement of value to be conserved across the system globally. The magic lies in how the formulation of our space is a "braided category" which means that there is a "handedness" to the order of events. Essentially, if one creates an Emission from an address/account with channel token A into B, that occurs as a deformation of token A's boot vector into token B's. The deformation (cofactors changes/modified) occurs according to the order given by the braiding between A and B. That braiding can be though of as a "loop space" or like a vortex within a directed graph and according to the laws about consrvation, the total gain from a loop around the loop space must be conserved, but within the loop space itself it does not need to be. That is to say, that there is a "locally relative" arbitrage that preserves the total magnitude of the loop space between A and B, but increases an address's value is valid. We can show this in like one line (I think it's actually an extension of how Stephen Smale came up with market equilibria) which is that the solutions to the dual space form a "spectra" and that the solutions of the spectra in our model which allow for locally relative arbitrage still have the same solutions or "stable points".
-So the idea here is that we should be able to now take these lagrange multipliers (using the ratio for the diff eq (4 i believe) in my proof) we can derive matrix equations for the price system. From those we can look at the stability of channel tokens depending on an influx of transactions or emissions. 
+We can actually allow for arbitrage across commodities that allow for arbitrage to occur across each commodity's "boot vector" yet still preserving the requirement of value to be conserved across the system globally. 
+The magic lies in how the formulation of our space is a "braided category" which means that there is a "handedness" to the order of events. 
+Essentially, if one creates an Emission from an address/account with channel token A into B, (moving derivative value from one orderbook to another), that occurs as a deformation of token A's boot vector into token B's. 
+The deformation (cofactors changes/modified) occurs according to the order given by the braiding between A and B. 
+That braiding can be though of as a "loop space" or like a vortex within a directed graph and according to the laws about consrvation, the total gain from a loop around the loop space must be conserved, but within the loop space itself it does not need to be. 
+That is to say, that there is a "locally relative" arbitrage that preserves the total magnitude of the loop space between A and B, but increases to an address's value is valid. 
+The solutions to the dual space form a "spectra" and that the solutions of the spectra in our model which allow for locally relative arbitrage still have the same solutions or "stable points".
+Now from the lagrange multipliers we can derive matrix equations for the price system. 
+From those the stability of channel tokens fluctuates depending on an influx of transactions or Emissions. 
 
-Although we cannot have Dirichlet forms be the morphisms of a category themselves,we  have  a  standard  trick  for  turning  data  into  the  morphisms  of  a  category:   wedecorate cospans with them
+\begin{theorem}
+There exists a Dirichlet form in terms of behavior contracts $\Theta$
+\end{theorem}
 
-
-Inspired by the principle of least action of classical mechanics inanalogy  with  the  principle  of  minimum  power,  we  develop  a  setting  for  describingbehaviours that allows for easy discussion of composite behaviours:  Lagrangian sub-spaces of symplectic vector spaces.
-The decorated corelations that describe lagrangian relations have the same signature as GraphCospan.
+\begin{proof}
+Although we cannot have Dirichlet forms be the morphisms of a category themselves, we  have  a  standard  trick  for  turning  data  into  the  morphisms  of  a  category: we decorate cospans with them.
+Inspired by the principle of least action of classical mechanics in analogy  with  the  principle  of  minimum  power,  we  develop  a  setting  for  describing behaviors that allows for easy discussion of composite behaviors:  Lagrangian sub-spaces of symplectic vector spaces.
+The decorated correlation that describe lagrangian relations have the same signature as GraphCospan.
 Thus we can describe the simplecitification of $ConTop \rightarrow GraphCospan$ as Lagrangian relations as follows:
 \begin{equation}
 Lagr: (Cospan(Finset), +) \rightarrow (Set, \times)
@@ -1231,47 +1322,54 @@ Res_N: Graph(N) \rightarrow LinSub(N)
 This defines a monoidal natural transformation.
 Hence, by Theorem4.1, we obtain a hypergraph functor $GraphCospan \rightarrow LinSubCospan$.
 
-The semantics provided by this functor match the standard interpretation of networksof linear resistors.
-The maps of the Frobenius monoid take on the interpretation of perfectly conductive wires, forcing the potentials at all nodes they connect to be equal,and the sum of incoming currents to equal the sum of outgoing currents—precisely thebehaviour implied by Kirchhoff’s laws. 
+The semantics provided by this functor match the standard interpretation of networks of linear resistors.
+The maps of the Frobenius monoid take on the interpretation of perfectly conductive wires, forcing the potentials at all nodes they connect to be equal and the sum of incoming currents to equal the sum of outgoing currents; precisely the behaviour implied by Kirchhoff’s laws. 
 More generally, let $(X \xrightarrow{i} N \xleftarrow{o} Y, (N, E, s, t, r)$ be a morphism of GraphCospan, with Q the power function corresponding to the graph $\Gamma = (N, E, s, t, r)$.
 The image of this decorated cospan in LinSubCospan is the decorated cospan $(X \xrightarrow{i} N \xleftarrow{o} Y, \{ (\phi, \nabla Q_{\phi}) | \phi \in \mathbb{R}^N \}$ and it follows that the subspace
 \begin{equation}
 LinSub[i,o](Res_N*\Gamma)) \subseteq \mathbb{R}^{X + Y} \oplus (\mathbb{R}^{X + Y})*
 \end{equation}
 is the subspace of electrical states on the terminals X+Y such that currents and potentials can be chosen across the network of resistors (N, E, s, t, r) that obey Ohm’s and, on its interior, Kirchhoff’s laws.
-In particular, after passing to a subspace of the terminals inthis way, composition in LinSubCospan corresponds to enforcing Kirchhoff’s laws on theshared terminals of the two network\footnote{https://arxiv.org/pdf/1504.05625.pdf}.
+In particular, after passing to a subspace of the terminals in this way, composition in LinSubCospan corresponds to enforcing Kirchhoff’s laws on the shared terminals of the two network\footnote{https://arxiv.org/pdf/1504.05625.pdf}.
 The potential $\phi$ is  a  realizable  potential  for  a  given  circuit  if and only if the induced current
 \begin{equation}
 I(e) = \frac{1}{Z(e)}(\phi(t(e)) - \phi(s(e)))
 \end{equation}
 where Z is the impedance of the component.
-If so, it obeys kirkov's current law:
+If so, it obeys Kirkov's current law:
 \begin{equation}
 \underset{s(e)=n}{\sum} I(e) = \underset{t(e)=n}{\sum} I(e)
 \end{equation}
 for all $n \in N \backslash \partial N$.
+\end{proof}
 
-By defining a Dirichlet form in terms of behavior contracts $\Theta$, we can now define the theory of arbitrage for Generative Calculus.
-An ‘external behaviour’, or behaviour for short, is an equivalence class of circuits, where two are considered equivalent when the boundary current is the same function of the boundary potential.
+By defining a Dirichlet form in terms of behavior contracts $\Theta$, we can now define the theory of arbitrage with Generative Calculus.
+An ‘external behavior’, or behavior for short, is an equivalence class of circuits, where two are considered equivalent when the boundary current is the same function of the boundary potential.
 Dirichelet forms $Q: \mathbb{R}^S \rightarrow \mathbb{R}$ where $S$ is a finite set are important because they have the properties of potential difference outlined by Ellerman, but also because they obey the Markov Property\footnote{6.14 https://math.ucr.edu/home/baez/thesisfong.pdf} which will be made use of in defining discrete operators obeying the steady states of the coherence complex.
+
 Consider the black box functor, a well defined hypergraph functor in the category of circuits
 \begin{equation}
 \blacksquare: Circ \rightarrow DirichCospan \rightarrow LagrCospan \rightarrow LagrCorel \rightarrow LagRel
 \end{equation}
 The equivalence of $\blacksquare$ and $Cell$ as follows, will demonstrate the properties of the DirichCospan.
 
+\begin{theorem}
+ $\blacksquare$ $\cong$ $Cell$ 
+\end{theorem}
+
+\begin{proof}
 First lets redefine Cell in terms of Circ. 
 Consider that hile cospans in some categoryCwith finite colimitsare adequate for describing the interconnection of open systems,  their compositionoften retains more information than can be observed from the boundary. 
-As was shown for the case of linear relations (which Cell inherits from), corelations with respect to an epi-mono factorisation system instead provide the rightnotion of black boxed open system.
-An open system or, equivalently, a system with boundary, is described by a variant of the colimit , which Cong defines as the bound colimit\footnote{7.1 https://math.ucr.edu/home/baez/thesis}
+As was shown for the case of linear relations (which Cell inherits from), corelations with respect to an epi-mono factorisation system instead provide the right notion of black boxed open system.
+An open system or, equivalently, a system with boundary, is described by a variant of the colimit , which Fong et. al. defines as the bound colimit\footnote{7.1 https://math.ucr.edu/home/baez/thesis}
 Define $Cell$ as the 
 \begin{equation}
 Cell: Circ \rightarrow DirichCospan \rightarrow LagrCospan \rightarrow LagrCorel \rightarrow LagRel
 \end{equation}
-with bound colimit $B \rightarrow T$ defined by the apex  of  the  cocone  that  is  initial  out  of  all  cocones  over  theboundary diagram that extend to a cocone over the open system diagram $s: B \rightarrow T$.
-As $LinRel$, Cell has an epi-split mono factorisation system, meaning the equivalence classes of open systems can be indexed by epis $e: B \rightarrow T$ where the epi e is the minimal representation, or the black boxed system.
-So the bound colimit for a closed system is the minimal representation of one type $\epsilon \rightarrow \nu$ and $Cell(\epsilon, \otimes)$ is given by the image of system homset hom(T,V) in the boundary homset hom(B,V).
-The ‘minimal representation’Mis initial in the cocones overBthat extendto  cocones  over $s: B \rightarrow T$  epi-split  mono  factorisations=e;m,  with  someretractionm', then for two non-unique cocones there exists a unique map which commutes
+with bound colimit $B \rightarrow T$ defined by the apex  of  the  cocone  that  is  initial  out  of  all  cocones  over  the boundary diagram that extend to a cocone over the open system diagram $s: B \rightarrow T$.
+As $LinRel$, Cell has an epi-split mono factorization system, meaning the equivalence classes of open systems can be indexed by epis $e: B \rightarrow T$ where the epi $e$ is the minimal representation, or the black boxed system.
+So the bound colimit for a closed system is the minimal representation of one type $\epsilon \rightarrow \nu$ and $Cell(\epsilon, \otimes)$ is given by the image of system homset $hom(T,V)$ in the boundary homset $hom(B,V)$.
+The ‘minimal representation’ $M$ is initial in the cocones over $B$ that extend to  cocones  over $s: B \rightarrow T$  epi-split  mono  factorizations = $e;m$,  with  some retraction $m$, then for two non-unique cocones there exists a unique map which commutes
 % https://q.uiver.app/?q=WzAsMyxbMCwwLCJNIl0sWzIsMCwiTiJdLFsxLDEsIkIiXSxbMCwxLCJtO3giXSxbMiwwLCJlIl0sWzIsMSwiYyIsMl1d
 \[\begin{tikzcd}
 	{M} && {N} \\
@@ -1280,13 +1378,8 @@ The ‘minimal representation’Mis initial in the cocones overBthat extendto  c
 	\arrow["{e}", from=2-2, to=1-1]
 	\arrow["{c}"', from=2-2, to=1-3]
 \end{tikzcd}\]
-
-Define the minimal representation of Cell is the diagram for (now open) system $\Omega^T_\Gamma \backslash \Omega^0_0$, where open is still bounded by the enrichment $\nu$ and defined in terms of ConTop as
-\begin{equation}
-?
-\end{equation}
-
-Define the open bound colimit as: where rather than just an arrow $B \rightarrow T$,we  instead  want  the  apex  of  the  cocone  that  is  initial  out  of  all  cocones  over  theboundary diagram that extend to a cocone over the system diagram
+Define the minimal representation of Cell as open system $\Omega^T_\Gamma \backslash \Omega^0_0$, where open is still bounded by the enrichment $\nu$ and defined in terms of ConTop.
+Define the open bound colimit as: where rather than just an arrow $B \rightarrow T$,we  instead  want  the  apex  of  the  cocone  that  is  initial  out  of  all  cocones  over  the boundary diagram that extend to a cocone over the system diagram
 % https://q.uiver.app/?q=WzAsNyxbMCwyLCJNIl0sWzIsMiwiTiJdLFsxLDMsIkNlbGxeaSJdLFsxLDAsIlxcT21lZ2Ffe1QsXFxHYW1tYSA+MH0iXSxbMiwxLCJcXFRoZXRhIl0sWzAsMSwiXFxHYW1tYSJdLFszLDNdLFswLDEsIm07eCJdLFsyLDAsImUiXSxbMiwxLCJjIiwyXSxbNSwwLCJcXG90aW1lczogXFx2ZWUiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJhcnJvd2hlYWQifX19XSxbNCwxLCJcXG90aW1lczogXFx3ZWRnZSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6ImFycm93aGVhZCJ9fX1dLFs0LDUsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6ImFycm93aGVhZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzMsNCwiXFxhbHBoYSJdLFs1LDMsIlxcZ2FtbWEgXFxvdGltZXMgMSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6ImFycm93aGVhZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
 \[\begin{tikzcd}
 	& {\Omega_{T,\Gamma >0}} \\
@@ -1318,7 +1411,7 @@ let $p = \colim(Fibers_\epsilon)$ the convergence of all fibers' to a valid pare
 let $p^{-1} = (Fibers_\epsilon)$ the matrix of collateral swaps between Fibers.
 
 For $A, B, C \in \Omega$, constrain $\Omega := \alpha(\lambda, p)$.
-The relationship between $\theta and \Gamma$ is given by the type tree and will be used below to form the following octahedal identity, which demonstrates the dirichlet bounds for the story problem and associated $\Gamma$ for ConTop.
+The relationship between $\theta and \Gamma$ is given by the type tree and will be used below to form the following octahedral diagram, which demonstrates the Dirichlet bounds for the story problem and associated $\Gamma$ for ConTop.
 Consider the Convergence Props above extended for a sequence of morphisms in $K(A)$\footnote{https://www.math.lsu.edu/~pramod//tc/07s-7280/notes4.pdf} of which ConTop is equivalent to via Cell Homology functor of the Protocol Topology.
 The nth translation (or shift) is the complex $A[n]^{i} = A^{i+n}$ with differential $d^i: A^{I+1} \oplus B^I \rightarrow A^{i+2} \oplus B^{i+1}$ and translation morphism $f[n]: A[n]^\bullet \rightarrow B[n]^\bullet$ defined by $f[n]^i: = f^{i+n}$.
 The cone of a complex $f$ denoted $f^\bullet f$ is defined as $cone^i f = A^{i+1} \oplus B^i$ with differential $d^i: A^{i+1} \oplus B^i \rightarrow A^{i+2} \oplus B^{i+1}$ given by
@@ -1414,26 +1507,42 @@ Given a linear operator $f: C^0(\partial \Gamma) \rightarrow C^0(\Gamma)$, defin
 \begin{equation}
 Q(\tau) = \sum_{i, j} c_{i, j}(\tau_i - \tau_j)^2
 \end{equation}
-Thus equivalence of $Cell \cong \blacksquare$ in terms of the solution its Dirichlet problem.
+\end{proof}
+
+It follows that $Cell \cong \blacksquare$ in terms of the solution its Dirichlet problem.
 
 \subsubsection{Utility Theory of Arbitrage Free Networks}
-By the Topological Second Law of Thermodynamics and Entropy Rate and $\mathcal{\chi}_T$can only increase or stay constant with t.
+By the Topological Second Law of Thermodynamics and Entropy Rate and $\mathcal{\chi}_T$ can only increase or stay constant with t.
 Thus we can calculate the Utility of $\Omega \in ConTop$ using the efficiency of real heat engines.
-Consider the carnot engine, which can be hooked in series and the composite efficiency debity is the product of individual debits.
-Between two information resevoirs, all carnot engines have the same efficiency and thus the same efficiency debit, otherwise it would be possible to create a "heat arbitrage" creating a "perpetual motion machine of the second kind"
+Consider the Carnot engine, which can be hooked in series and the composite efficiency debit is the product of individual debits.
+Between two information reservoirs, all Carnot engines have the same efficiency and thus the same efficiency debit, otherwise it would be possible to create a "heat arbitrage" creating a "perpetual motion machine of the second kind."
 The composite efficiency debits between any two reservoirs implies path independence.
-Thus by Ellerman's arbitrage theorem, the second law implies that there exists $m+1$ positive real "prices" $T_0 \dots T_m$ such that for any carnot engine operating between nodes h and c, the efficiency debit is $r = \frac{T_c}{T_h}$.
-If the "prices" are normalized so that the freezing and boiling points of water differ by 100 units, then the "prices" are the Kelvin Abaolute Temperatures of the reservoirs.
+Thus by Ellerman's arbitrage theorem, the second law implies that there exists $m+1$ positive real "prices" $T_0 \dots T_m$ such that for any Carnot engine operating between nodes h and c, the efficiency debit is $r = \frac{T_c}{T_h}$.
+Define a thermodynamic engine defined by Ellerman's arbitrage theorem an Economic Engine.
+
+\begin{theorem}
+Efficiency of the Economic Engine is equivalent to the efficiency of an electrical circuit.
+\end{theorem}
+
+\begin{proof}
+If the "prices" are normalized so that the freezing and boiling points of water differ by 100 units, then the "prices" are the Kelvin Absolute Temperatures of the reservoirs.
 
 Thus we can describe the efficiency of ConTop or its component protocols as
 \begin{equation}
 e = 1 - (\frac{dQ_c}{dQ_h})
 \end{equation}
-and the efficiency debit as $r = 1 - e = (\frac{dQ_c}{dQ_h}$.
+and the efficiency debit as $r = 1 - e = \frac{dQ_c}{dQ_h}$.
 It follows from the definition of the extended power functional for the ConTop that the efficiency (MWe\footnote{https://energyeducation.ca/encyclopedia/Megawattselectric}) for output $o \cong c$ and input $i \cong h$ is given by
 \begin{equation}
 e = \frac{dQ_o}{dQ_i}
 \end{equation}
+\end{proof}
+
+\begin{theorem}
+For a ConTop Complex, as Cells of higher rank eclipse Cells of lower rank, or as the coboundary that is the bounded colimit of an open system grows relative to $\Omega_0$, the overall efficiency increases.
+\end{theorem}
+
+\begin{proof}
 In order to understand efficiency of Cell complex, we need to extend the definition of utility for circuits into an information theoretic complex, namely the Minimum free energy complex.
 The total free energy is a Kullback-Leibler divergence and a special case (symmetric in the interacting body) of the free energy introduced by Baez and Pollard\footnote{Baez, J.; Pollard, S. Relative Entropy in Biological Systems. Entropy}.
 A general information structure is defined by the triple $(\Omega, \prod, P)$ above which can be used to form a simplicial information cohomology complex which can be triangulated like space-time representations such as causal sets; this was actually alluded to via Blockchain Cohomology as the equivalence of $\Omega$ with Sorkin's Fintoposets.
@@ -1449,13 +1558,19 @@ e = \frac{dQ_o}{dQ_i} = \frac{\Omega - \Omega_0}{\Omega_0} \underset{\lim{\Omega
 and can be seen as an increase in the latent variables contained in the coboundary $H_k$ (ways in which they can mix or nonlinear effects) as the number of variables in the base layer $\Omega_0 = k$ increases.
 It follows that as more consuming channels in ConTop eclipse producing, that is as the coboundary that is the bounded colimit of an open system grows relative to $\Omega_0$, the overall efficiency increases.
 This is an artifact of the fact that as more producers become consumers of other producers, there is an increase in cross information and thus Kulbak-Leibler (KL) divergence increases. 
+\end{proof}
 
 \subsection{Equilibria Analysis}
-Now we can define the pareto optima for ConTop.
-We can extend the definition of boot vector of Ellerman's boot system via the triangulated category and in terms of spiders allong the enrichment.
-This will give a 1:1 formulation of the matrix calculus for the lagrangian multipliers in terms of signal flow graphs.
+Now we can define the Pareto optima for ConTop.
+The definition of boot vector of Ellerman's boot system can be extended via the triangulated category and in terms of spiders along the enrichment.
+This will give a 1:1 formulation of the matrix calculus for the Lagrangian multipliers in terms of signal flow graphs.
 
-Utility maximization implies that the marked must be arbitrage free, which is described as
+\begin{theorem}
+For ConTop complexes, the solution spectra for utility function equilibria are given by the Cheeger bounds of the manifold.
+\end{theorem}
+
+\begin{proof}
+Utility maximization implies that the market must be arbitrage free, which is described as
 \begin{equation}
 \frac{MU_1}{p_1} = \frac{MU_2}{p_2} \dots = \frac{MU_n}{p_n}
 \end{equation}
@@ -1557,15 +1672,15 @@ r = 1+e = \frac{dQ_o- dQ_i}{dQ_i} = \frac{|A - G|}{A}
 \end{equation}
 which equals 0 if optimal.
 Note this is an equivalent definition of the coherence complex but incorporating state metadata into the creation of H.
-The solution spectra to s Cell is given by the varaince bounding of the Cheeger bounds\footnote{https://www.maths.lancs.ac.uk/~sherlocc/ResearchTutorials/L2var.pdf}, which are given by the co/homological dimensions of the a given Cell sub-complex in the total complex ConTop.
-
+The solution spectra to s Cell is given by the varaince bounding of the Cheeger bounds\footnote{https://www.maths.lancs.ac.uk/~sherlocc/ResearchTutorials/L2var.pdf}, which are given by the co/homological dimensions of the manifold of a given Cell sub-complex in the total complex ConTop.
+\end{proof}
 
 \subsubsection{Pareto Optima}
 We can now define Pareto optima for ConTop and the coherence complex.
 Consider a Pareto Allocation as Pareto optimal or Pareto efficient\footnote{https://are.berkeley.edu/~traeger/Lectures/ClimateChangeEconomics/Slides/}, if it is not possible to reallocate the resources of the economy in a way such that possible to reallocate the resources of the economy in a way such that at least one person is better off without making any other person worse off.
-In a competitive economy, all firms maximize profits, individuals  maximize their utility and markets clear.
-A competitive economy's market equilibrium is defined by the pareto optimal steady states of its utility curves.
-Naturally as stated in the foreward, a competitive economy is the goal of generative economics, thus we can show the success of our construction ConTop and concretely define the steady state solutions of a pareto optimizing consensus protocol.
+In a competitive economy, all firms maximize profits, individuals maximize their utility and markets clear.
+A competitive economy's market equilibrium is defined by the Pareto optimal steady states of its utility curves.
+It follows that a competitive economy is the goal of generative economics, thus we can show the success of our construction ConTop and concretely define the steady state solutions of a Pareto optimizing consensus protocol.
 
 Consider the 'attainable states' $W$ as a subset of a 'commodity space' $P^m$, an open set in the Cartesian space $R^l$.
 Define
@@ -1573,10 +1688,11 @@ Define
 W = \{ x \in P^m | \sum x_i = w \}
 \end{equation}
 an open subset of an affine subspace with compact closure in $(R^l)^m$.
-Each consumer is supposed to have his preferences represented by a function $u_i:P \rightarrow R$, his utility function which we suppose as differentiable as necessary.
+Each consumer is supposed to have his preferences represented by a function $u_i:P \rightarrow R$, their utility function which we suppose as differentiable as necessary.
 Thus consumer i prefers $x'_i$, to $x_i$ if and only if $ui(x',)> ui(xi)$. 
-Consumer i is indifferent to commodity bundles in the same level surface of $u_i$.
+Consumer $i$ is indifferent to commodity bundles in the same level surface of $u_i$.
 Hence the  $u^{-1}_i(c)$ are called indifference surfaces. 
+
 let $\pi_i: P^m \rightarrow P$ be the projection $\pi_i(x) = x_i$ then the we have induced functions on W, still denoted by  $u_i$, defined as the composition 
 \begin{equation}
 W \xrightarrow{inclusion} P^m \rightarrow P \xrightarrow{u_i} R
@@ -1587,7 +1703,7 @@ The idea is that if $x \in W$ is not Pareto, then it is not economically stable.
 
 In the abstract setting of Smale's Pareto theory\footnote{https://sci-hub.se/https://www.sciencedirect.com/science/article/abs/pii/0304406874900020} the idea of the following 'Hessian'\footnote{https://sci-hub.se/https://link.springer.com/article/10.1007/BF00485983} is to obtain a criterion for a point $x \in W$ to be a stable Pareto point.
 The Hessian $H_x$ for utility $u: W \rightarrow R^m$ at $x \in \theta$, where u is $C^r$ and x satisfies the rank condition, is negative definite.
-If u satisfies the "transversality condition" (given by the fredholm operators of + and - \footnote{Corollary B.14, Generic Morse–Smale property for the parabolic equationon the circle}) and has no cycles, gradient vector field for u is a smooth tangent vector field X defined over W with the property that $X(x)\in H(x)$ for $x \notin \theta$ and $X(x)=0$ for $x \in \theta$ which corresponds to morse relations given by
+If u satisfies the "transversality condition" (given by the Fredholm operators of + and - \footnote{Corollary B.14, Generic Morse–Smale property for the parabolic equationon the circle}) and has no cycles, gradient vector field for u is a smooth tangent vector field X defined over W with the property that $X(x)\in H(x)$ for $x \notin \theta$ and $X(x)=0$ for $x \in \theta$ which corresponds to morse relations given by
 \begin{equation}
 M_i = \sum_{\lambda} dim H_{i - \lambda}(\theta_{\lambda}, \theta_{\lambda}')
 \end{equation}
@@ -1598,6 +1714,11 @@ M_m = dim H_1(\theta_{n - 1}, \theta_{n - 1}')
 \end{equation}
 however m can be extended beyond two to create an m-dimensional ETF or collateralized swap, which will be shown below.
 
+\begin{theorem}
+Commodities defined as the composition of ConTop complexes obey global enrichment.
+\end{theorem}
+
+\begin{proof}
 A dynamical system is a gradient system on $X, \dot{x} = f(x)$ if there is some function $V: X \rightarrow R$ such that $f(x) \equiv -D V(x)$.
 The function $V(x)$ is often referred to as the potential function of the system; $f(x)$ is called the gradient of V at x.
 The directional derivative of V(x) in the direction $h=(h l \dots hn), \rVert h \rVert  = 1$, is defined to be $DV(x) \dot h$. 
@@ -1612,23 +1733,30 @@ Thus the equilibrium of the Hamiltonian system are symmetric saddle points.
 In the general case, where the Hamiltonian is nonlinear, the same kind of saddle point property occurs when the function is concave in x and convex in y. 
 
 The Lyapunov exponents correspond to the original price index matrix's steady states where it is defined across the tensor and not just the direct sum.
-This enforces braiding and allows a flattened pareto optima matrix.
+This enforces braiding and allows a flattened Pareto optima matrix.
 Note: this flattened matrix is actually given by the diffusion map below, which can be formed due to the conjugate dual definition of A.
 The commodities in composed protocols correspond to "ETFs" or synthetic financial products constructed out of the configuration of many states in a certain order following the global enrichment.
-
+\end{proof}
 
 \subsection{Transition Matrices for ConTop}
 Dynamical systems where stability is of concern are often described in terms of Ergodicity, or the tendency for a system state to always return to a starting mode.
 Up until this point we have extended the the locally unstable globally stable Morse Smale systems with the ordinary poincare metric and extended this (trivially) with the Fisher information metric.
-This connects the berve/atlas space for Gibbs Microcanonical Partition Functions of Entropic forces\footnote{34  https://www.mdpi.com/1099-4300/18/8/309/htm which } to the theory of Entropic forces as $\partial \mathbb{Nu}$ has units of inverse of energy and corresponds the locallu unstable manifold.
-Both manifolds are then bound by the Freedholm equation ($g(t)$, (125), which is essentially just the coherence complex defined cohomologically.
+This connects the nerve/atlas space for Gibbs Microcanonical Partition Functions of Entropic forces\footnote{34  https://www.mdpi.com/1099-4300/18/8/309/htm} to the theory of Entropic forces as $\partial \mathbb{Nu}$ has units of inverse of energy and corresponds the locally unstable manifold.
+Both manifolds are then bound by the Freedholm equation ($g(t)$, 125), which is essentially just the coherence complex defined cohomologically.
 In turn the Freedholm formulation is connected to the theory of Entropic forces, as we will show bellow.
-First, a closed form Markov Partition and matrix transition formulation of Contop is formed for computational refinement.
+First, a closed form Markov Partition and matrix transition formulation of ConTop is formed for computational refinement.
 
 \subsubsection{Transition Matrix for ConTop with n-state channels}
 Consensus probability can be formed in terms of opinion formation which is a prototypical class of markov process on a network\footnote{5.7 https://arxiv.org/pdf/1612.03281.pdf}.
 The probability of consensus or convergence of the protocol complex can be defined in terms of the DeGroot model by imposing a conservation of opinions where $\sum^N_{i=1} F^{DG, disc}_i x_i (n)$ is  conserved  over  time  for  positive  constants $F^{DG, disc}_i$ (with $i \in 1\dots N)$ where  the  superscript  “disc”  stands  for  discrete  time  and $ \sum^N_{i=1} F^{DG, disc}_i = 1$.
 This implies that $F^{DG, disc}_i$ quantifies the influence of $v_i$ on the final opinion in consensus. 
+
+\begin{theorem}
+The functional probability of convergence of a consensus network $F^{ED}_i$ is isomorphic to the utility of a thermo-electric system, namely 
+$F^{ED}_i = (const) \times \frac{s^{out}_in}{s^{in}_{out}}$
+\end{theorem} 
+
+\begin{proof}
 By imposing this conservation law, one obtains
 \begin{equation}
 \sum^N_{i=1} F^{DG, disc}_i x_i (n - 1) = \sum^N_{i=1} F^{DG, disc}_i x_i (n) = \sum^N_{i=1} F^{DG, disc}_i x_i (n) ( \sum^N_{i=1} A_{ji} x_j (n-1) )
@@ -1638,6 +1766,7 @@ by requiring that the above holds for $ (with x_i(n-1)i \in 1\dots N $
 F^{DG, disc}_i  = \sum^N_{i=1} A_{ji} F^{DG, disc}_j
 \end{equation}
 where $F^{DG, disc}_i $ is the stationary density of a DTRW (discrete time random walk) and whose transition-probability matrix is  $A^{\intercal}$ the  adjacency  matrix  of  the  edge-reversed  network $D^{rev}$.
+
 For the continuous case of node influence metrics $x$ we have 
 \begin{equation}
 \frac{d x(t)}{dt} = (A^{\intercal} - D^{rev}) \equiv -L^{rev} x(t)
@@ -1668,8 +1797,7 @@ equation it satisfies is
 \begin{equation}
 (F^{ED}_1 \dots F^{ED}_n)L^{rev} = 0
 \end{equation}
-We can obtain an intuitive understanding of above by writing a recursive equation for the consensus probability when the process starts from a single node79
-$v_i$ with opinion 0 (i.e., for $F^{ED}_i$).
+We can obtain an intuitive understanding of above by writing a recursive equation for the consensus probability when the process starts from a single node $v_i$ with opinion 0 (i.e., for $F^{ED}_i$).
 We obtain
 \begin{equation}
 F^{ED}_i = \frac{A_{i, j}}{\sum^N_{j'=1} A{i', j'}} + \frac{\sum^N_{j=1} A{j, i}}{\sum^N_{j'=1} A{i', j'}} \times 0 + \frac{\sum^N_{i', j'=1; i'=i; j'=j} A{i', j'}}{\sum^N_{i', j'=1} A{i', j'}}
@@ -1684,6 +1812,7 @@ If  the  network  is  directed,  we  obtain  a  first-order  approximation  to t
 F^{ED}_i = (const) \times \frac{s^{out}_in}{s^{in}_{out}}
 \end{equation}
 which is isomorphic to the calculation of utility based on efficiency of a thermoelectric system.
+\end{proof}
 
 \subsubsection{Transition Matrix for ConTop $L_0$ and Forgery Probability}
 The transition-probability  matrix $T$ has  elements $T_{ij}$,  which  give  the  probability that a walker (state of network) moves from $v_i$ to $v_j$, of
@@ -1693,7 +1822,12 @@ T_{i, j} = \frac{A_{ij}}{s^{out}_{in}} | s^{out}_{in} > 0
 and $\sum T_{i, j} = 1$, for the largest eigenvalue $\lambda_l \leq 1$ for directed graphs such as ConTop.
 This  transform,  called  the“graph  Fourier  transform”,  generalizes  the  standard  Fourier  transform  of  an RW  [see  Eqs.  (3)  and  (7)],  and  the  eigenvectors  of  the  transition-probability matrix T play the role of the Fourier modes.
 
-For a transition-probability  matrix $T$ representing consensus, the Exit Probability can be used to determine the criteria for Forgery, or an invalid state in $L_0$
+\begin{theorem}
+For a transition-probability  matrix $T$ representing consensus, the Exit Probability can be used to determine the criteria for Forgery, or an invalid state in $L_0$.
+
+\end{theorem}
+
+\begin{proof}
 The transition-probability matrix T then has the following form
 \begin{equation}
 T = 
@@ -1717,17 +1851,18 @@ This number of visits is equal to the (i,j)th element of the matrix
 \begin{equation}
 W = \sum^{\infty}_{n=0} Q^n = (I - Q)^{-1}
 \end{equation}
-because  the  (i,j)th  element  ofQnis  equal  to  the  probability  that  a  randomwalker starting fromvivisitsvjat discrete time n.
+because  the  (i,j)th  element  ofQnis  equal  to  the  probability  that  a  randomwalker starting from vi vis its v jat discrete time n.
 The matrixWis called the“fundamental matrix” associated withQ. 
 The matrix on the right-hand side of $W$ s called the “resolvent” ofQ. 
-Similar considerations arise in the study of “central” (i.e., important) nodes in networks as decribed above.
-The “exit probability” (i.e., the “first-passage-time probability”) is definedas the probabilityUijthat the walker terminates at an absorbing statevjwhenit  starts  from  a  transient  statevi.  
+Similar considerations arise in the study of “central” (i.e., important) nodes in networks as described above.
+The “exit probability” (i.e., the “first-passage-time probability”) is defined as the probability Uij that the walker terminates at an absorbing state vj when it  starts  from  a  transient  state vi.  
 When  there  are  multiple  absorbing-statenodes, it is nontrivial to determine the exit probability. 
-The probability thatthe walker reachesvjafter exactlynsteps is given by the (i,j)th element of $Q^{n-1}R$. 
+The probability that the walker reaches vj after exactly n steps is given by the (i,j)th element of $Q^{n-1}R$. 
 Therefore, we obtain the exit probability in matrix form as follows:
 \begin{equation}
 U = \sum^{\infty}_{n=0} Q^{n-1} = W R
 \end{equation}
+\end{proof}
 
 Thus we can determine the time limit for convergence in terms of $\aleph$ as the exit probability for $v -3$ byzantine nodes and $v-1$.
 If $p(\aleph(t)) < \frac{\lVert (U(v_b - v)) \rVert }{\lVert (U(v)) \rVert}$
@@ -1744,74 +1879,88 @@ Thus we have
 T(v) = \frac{1}{\sqrt{s_v}} A^{\intercal} S_{v} 
 \end{equation}
 
-\subsection{Examples: HGTP}
-In HGTP, utility is given by oraclization of external data, the application of consensus to validate data and by throughput or the rate at which data is notarized and validated. 
-Like all consensus protocols, access to rewards is governed by facilitator selection. 
-In turn, facilitator selection is governed by a decentralized locality sensitive hashing mechanism which organizes the network by a utility seeder-leacher-ratio of transactions validated vs transactions submitted. 
-The LSH for facilitator selection of $L_1$ is the given by the Bitwise exclusive-or or XOR distance between the first sha256 hash of the first Fiber in a Bundle's transaction hash.
+\subsection{Cellular Reserve Banking}
+Finally, we can define the roll of a protocol in arbitrating resources and economic stability. 
+Each Cell and Cell complex within ConTop can be equipped with its own relative interest rate.
+This is moreso a fact of a topos, for which exponentiation relative to its own domain and global domain is possible. 
+Because of this, consensus protocols can act as their own arbitrating authority in defining financial policy.
+For a decentralized network this translates from interest rate fluctuation and injection of capital into a particular sector, into fluctuations of validator rewards and resources offered.
+However, as will be shown, there is a distinct difference between a Generative Economy and centralized Capitalism: resources or needs of each individual Cell or complex in the economy can be met while still maintaining an invariant of no arbitrage.
+For any agent to act freely in an economy and the policymaker of a Central Bank violates the definition of no arbitrage in that they are privy to more information about the global economy than the average individual agent or firm.
+ConTop complexes, as the arbitrators of a currency, can perform the same role as Central Banks while still enforcing the law of no arbitrage.
+Define the Cellular Reserve Bank as the optimization of a loss function parameterized by Output Gap or and an aggregate measure of (computational) resource strain in the economy and inflation.
 
-Reputation is equivalent to the throughput a facilitator has provided vs. the throughput used, as well as the efficacy of oraclization-notarization and validation. 
-As nodes participate, they are ranked based on their reputation. 
-The magnitude of rewards and reputation is proportional to a rank. 
-Fees are charged relative to the scarcity of the throughput and only if an account breaches its allotted utility ratio. 
+\begin{lemma}
+A coherence complex's surface of least action simplifies to the traditional Central Bank shock response curve.
+\end{lemma}
 
-Apart from being the first fixed-total-supply asset accessible throughout the platform, the \$DAG token 
-\footnote{awesome-constellation information on the \$DAG token\\ \url{https://github.com/Constellation-Labs/awesome-constellation\#the-dag-token}} 
-acts as a credit mechanism, like cash, which, like Etheruems gas
-\footnote{Section 4.2 EthereumYellowpaper\\ \url{https://ethereum.github.io/yellowpaper/paper.pdf}}, 
-can be used to pay transaction fees when an account has not or can not maintain their required utility ratio. 
-The \$DAG token is also injected into the pool of validator rewards and there is incentive to validate transactions that have an accompanying fee attached. 
+\begin{proof}
+First consider the path integral formulation of the coherence complex.
+\begin{equation}
+\int \langle \zeta | \tau \rangle = U(x_1 \dots X_n; P_N)  - \sum_{t(e)=n} I(e)) + (\sum_{t(e)=n} I(e) -G(x_1 \dots X_n; P_N))
+\end{equation}
+Where the potential and kinetic energy is both fitted according to the current $I$ which encodes the flow of actions of actual state space vs the ideal state space.
+If we optimize with respect to mean square error between predicted and actual state matrices we have
+\begin{equation}
+\langle \zeta | \tau \rangle = (U(x_1 \dots X_n; P_N) - U(I(e)))^{2}  + (G(i(e)) -G(x_1 \dots X_n; P_N))^{2}
+\end{equation}
+which is a discrete manifold that describes a surface on the differential form of this particular coherence complex.
+This is the full solution spectrum to the validation of state hierarchically through the hypergraph surfaces of each rank in the poincare protocol complex.
+If we reduce the dimensionality strictly to the terminal object, or protocols of complexity $L0$, the dimensions of relative (by some linear factor $\beta$) minting rate $m$ and a fixed production rate $p$ we have 
+\begin{equation}
+\langle \zeta | \tau \rangle_0 = \beta (m_0 - m)^{2}  + (p_0 - p)^{2}
+\end{equation}
 
-The value of our network derives from the aforementioned total computational space available for verifying transactions, which corresponds to its maximum processing power and throughput. 
-Since our data model is a data dependency graph with hashes linking collections of data, we can equate value to the total amount of storage space that it can contain. 
-Thus we use a calculation of the ``volume'' of an account's contributions relative to the total volume of the data dependency graph to define validator rewards, distributed in the form of reputation and \$DAG. 
-The number of {\emph{Signed Observation Edge}} (SOE)
-\footnote{constellationlabs.io blog\\ \url{https://constellationlabs.io/blog/index.php/how-constellation-is-different-than-blockchain/}} 
-which link collections in our data dependency graph, is a quantifier for this performance. 
-We then weight this contribution by its relative information gain or its smallness measure of entropy, according to the distribution of all accounts' entropy measures. Note that an account/node can be attributed to multiple Cells.
+If we further parameterize such that we substitute with the Phillips curve
+\begin{equation}
+m_0 = m + \alpha (p_0 - p)
+\end{equation}
+we have 
 
-If we consider each SOE as a basis of given rank $r$ in the space of the data dependency graph, we can calculate this volume as the integral over the outer product space of these basis, which is a differential r-form.
-The notion of volume of space of the nodes across ranks $1$ through $r$ is
-{$\int_\mathcal{M} \epsilon_1 \wedge \dots \wedge \epsilon_r.$}
-Here $\mathcal{M}$ is a manifold and $\epsilon_r$ is a basis of the vector space of rank $r$. 
-Each collection in the data dependency graph has the basis and rank of the node that emitted it. 
-Within our model this would be explicitly defined as the numerical integration over the outer product of our cohomological definition
-\footnote{Blockchain cohomology text\\ https://arxiv.org/abs/1805.07047},
-which is a vector space given by the tensor product of each space across ranks 
-{$\sum_{1 \dots r} \Gamma^{\epsilon_1} \otimes \dots \otimes \Gamma^{\epsilon_r}$}.
-Each $\Gamma^{\epsilon_i}$ is a manifold corresponding to a rank in the differential form above, subordinate to the rank before it. If we assume a uniform data transmission, we can define bandwidth in SOE/s as the total space
-\footnote{ftp.cis.upenn text on diff. geo., see sec 9.2\\ \url{ftp.cis.upenn.edu/pub/cis610/public_html/diffgeom4.pdf}} 
-of the resources given by each node
-\begin{equation*} \label{eq2}
-\begin{split}
-B_{\mathrm{SOE}/\mathrm{s}} = \sum_{i\,\in\,\{1, \dots, r\}} \int \rho_i\, \theta_i\, \omega,
-\end{split}
-\end{equation*}
-where $\rho_i$ is a partition of unity and $\theta_i$ is a discrete diffeomorphism on our spaces $r$-form, $\omega$. This amounts to the effect that the protocol has on the total configuration space.
+\begin{equation}
+\langle \zeta | \tau \rangle_0 = \beta (m + \alpha (p_0 - p) - m)^{2}  + (p_0 - p)^{2}
+\end{equation}
+differentiating we have
+\begin{equation}
+\nabla_p \langle \zeta | \tau \rangle_0 = \alpha \beta (m + \alpha (p_0 - p) - m) + (p_0 - p) = 0
+\end{equation}
+giving
+\begin{equation}
+\nabla_p \langle \zeta | \tau \rangle_0 = \alpha \beta (m0 - m) + (p_0 - p) = 0
+\end{equation}
+and
+\begin{equation}
+\alpha \beta (m0 - m) = (p_0 - p)
+\end{equation}
+which is precisely the Central Bank utility loss function.
+\end{proof}
 
-By mapping each entry in the bandwidth space to its normalized Shannon entropy, giving a measure of performance in terms of relative information gain:
-\begin{equation*} \label{eq3}
-\begin{split}
-B_\mathrm{Entropy} = \sum_{i\,\in\,\{1, \dots, r\}} \int \rho_i\, H_i\, \omega.
-\end{split}
-\end{equation*}
-Here 
-{$H_i(p) = - \tfrac{1}{\log_b(i)} \sum_j p_j \log_b(p_j)$}
-is the normalized Shannon entropy, where $p$ is a discrete probability measure of how the result of a node's actions deviate from the acceptable state of the protocol and $b$ is our base. The later is binary, as we deal with bits. Reduction in entropy can be seen as a measure of efficiency. Normalized entropy is advantageous as it scales with sample size and has shown effective at anomaly detection in networks
-\footnote{Karthik, P. ``Detecting Anomalies Based On Entropy-Estimation''\\ \url{http://ijsetr.org/wp-content/uploads/2013/07/IJSETR-VOL-2-ISSUE-4-910-915.pdf}}.
+It can now be shown that ConTop complexes will always be more efficient than Central Banks with regards to utility via arbitrage reduction.
 
-\subsubsection{$L_0$ Steady States}
-\subsubsection{$L_1$ Steady States}
-\subsubsection{$L_0 \circ L_1$ (\$DAG) Steady States}
-\subsubsection{HGTP Proof of Safety}
-\subsubsection{Accrual of value for \$DAG Fibers}
-https://arxiv.org/pdf/1802.03080.pdf sec A-C
-https://web.stanford.edu/~boyd/papers/pdf/fmmc.pdf 3.1. Some Small Examples. (d)
+\begin{theorem}
+ConTop complexes of rank $\geq$ = 1 are more efficient than L0 utility loss.
+\end{theorem}
 
-whereas $T(v)$ above calculates steady states for converging consensus, we can use identities in the Utility theory of arbitrage to get a transition matrix for the price index which collapses the partition function of address balances.
+\begin{proof}
+Consider the efficiency of an economic engine
+\begin{equation}
+e = \frac{dQ_o}{dQ_i} = \frac{\Omega - \Omega_0}{\Omega_0} \underset{\lim{\Omega >> \Omega_0}}{\mapsto} \frac{\Omega}{\Omega_0} - 1
+\end{equation}
+As has been shown in the preceding lemma, utility optimization for Central Banks is the linearization of ConTop, i.e. first order approximation.
+Thus Central Bank policies will always be bounded by the higher order terms of ConTop complexes, which means that
+\begin{equation}
+\frac{\Omega}{\Omega_0} << \frac{\langle \zeta | \tau \rangle}{\Omega_0}
+\end{equation}
+where $\langle \zeta | \tau \rangle$ is the full sollution spectrum of the given complex and $\Omega$ is its first order rank system.
+\end{proof}
+Thus we have shown that any system with increasing complexity or rather with globally converged information gain will always eclipse centralized policies.
 
+\section{Conclusion}
+A new calculus of generative effects was introduced and used to derive the Economic Theory of Generativity. 
+From the Economic Theory of Generativity the Economic Engine was defined and used to compare Central Reserve Banking vs Cellular Reserve Banking.
+Key takeways are that the Generative Calculus can be extended to the wider field of generative effects.
+And that Cellular Reserve banking is promising a evolution of the arbitrage-riddled global banking system that maintains stable utility.
 
-\section{Remarks}
 
 \bibliographystyle{plain}
 \begin{thebibliography}{9}
